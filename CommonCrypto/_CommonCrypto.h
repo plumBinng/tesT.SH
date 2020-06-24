@@ -1,3 +1,5 @@
 //
 //  _CommonCrypto.h
-//  NeoS
+//  NeoSwift
+//
+//  Created 
