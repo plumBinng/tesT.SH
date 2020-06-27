@@ -3,4 +3,4 @@
 //  NeoSwift
 //
 //  Created by Luís Silva on 14/09/17.
-//  Copyrigh
+//  Copyright © 2017 drei. All rights
