@@ -12,4 +12,4 @@
 #include <CommonCrypto/CommonCrypto.h>
 
 
-#endif /*
+#endif /* _CommonCrypto_h */
