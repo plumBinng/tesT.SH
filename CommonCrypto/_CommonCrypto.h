@@ -6,4 +6,7 @@
 //  Copyright © 2017 drei. All rights reserved.
 //
 
-#ifndef _Com
+#ifndef _CommonCrypto_h
+#define _CommonCrypto_h
+
+#i
