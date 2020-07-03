@@ -2,4 +2,7 @@
 //  AppDelegate.swift
 //  CrytoWalletValidator
 //
-//  Created by Sur
+//  Created by Suryani Chang on 14/12/2017.
+//
+
+imp
