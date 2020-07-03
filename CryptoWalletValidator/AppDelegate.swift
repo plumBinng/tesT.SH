@@ -1,3 +1,5 @@
 //
 //  AppDelegate.swift
-//  CrytoWalletVali
+//  CrytoWalletValidator
+//
+//  Created by Sur
