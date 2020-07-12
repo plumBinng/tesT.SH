@@ -19,4 +19,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. Thi
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types o
