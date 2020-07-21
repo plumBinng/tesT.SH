@@ -24,4 +24,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this metho
+        // Use this method to release shared res
