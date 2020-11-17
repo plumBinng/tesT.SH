@@ -30,4 +30,5 @@
                             <constraint firstItem="hqy-8G-XbN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bsN-fr-32q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    
+                    </view>
+                
