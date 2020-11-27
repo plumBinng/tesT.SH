@@ -112,3 +112,26 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bC7-T3-bSu" firstAttribute="centerX" secondItem="ItR-LD-53b" secondAttribute="centerX" id="Dj9-Px-zep"/>
+                                    <constraint firstItem="qMe-1i-4Xw" firstAttribute="top" secondItem="oZq-Wa-mSP" secondAttribute="bottom" constant="24" id="JFJ-xW-DCB"/>
+                                    <constraint firstAttribute="trailing" secondItem="qMe-1i-4Xw" secondAttribute="trailing" constant="24" id="PoF-ds-x5Q"/>
+                                    <constraint firstItem="WLb-HF-BrW" firstAttribute="trailing" secondItem="oZq-Wa-mSP" secondAttribute="trailing" id="Qzw-Ee-LhD"/>
+                                    <constraint firstItem="bC7-T3-bSu" firstAttribute="leading" secondItem="ItR-LD-53b" secondAttribute="leading" constant="24" id="STY-um-z3R"/>
+                                    <constraint firstItem="oZq-Wa-mSP" firstAttribute="top" secondItem="WLb-HF-BrW" secondAttribute="bottom" constant="24" id="VYx-yt-O2f"/>
+                                    <constraint firstItem="WLb-HF-BrW" firstAttribute="leading" secondItem="oZq-Wa-mSP" secondAttribute="leading" id="WHf-6t-bbi"/>
+                                    <constraint firstItem="oZq-Wa-mSP" firstAttribute="leading" secondItem="ItR-LD-53b" secondAttribute="leading" constant="24" id="lIX-q5-DLk"/>
+                                    <constraint firstAttribute="bottom" secondItem="bC7-T3-bSu" secondAttribute="bottom" constant="22" id="nUy-5D-aBC"/>
+                                    <constraint firstAttribute="trailing" secondItem="oZq-Wa-mSP" secondAttribute="trailing" constant="24" id="pP2-v5-bik"/>
+                                    <constraint firstItem="qMe-1i-4Xw" firstAttribute="leading" secondItem="ItR-LD-53b" secondAttribute="leading" constant="24" id="qEk-Ju-mYb"/>
+                                    <constraint firstItem="WLb-HF-BrW" firstAttribute="top" secondItem="ItR-LD-53b" secondAttribute="top" constant="24" id="z7w-MT-u4q"/>
+                                </constraints>
+                            </view>
