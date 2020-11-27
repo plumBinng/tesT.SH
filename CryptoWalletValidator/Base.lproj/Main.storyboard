@@ -170,3 +170,17 @@
                     <connections>
                         <outlet property="addressField" destination="qMe-1i-4Xw" id="mdR-C8-Cnm"/>
                         <outlet property="cryptoField" destination="WLb-HF-BrW" id="TRL-2K-02r"/>
+                        <outlet property="holderView" destination="ItR-LD-53b" id="N8c-qw-MPz"/>
+                        <outlet property="networkField" destination="oZq-Wa-mSP" id="OAa-we-fGG"/>
+                        <outlet property="validateButton" destination="bC7-T3-bSu" id="2v8-xP-yAu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.13043478260872" y="132.06521739130434"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1242" height="1104"/>
+    </resources>
+</document>
