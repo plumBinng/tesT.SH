@@ -135,3 +135,38 @@
                                     <constraint firstItem="WLb-HF-BrW" firstAttribute="top" secondItem="ItR-LD-53b" secondAttribute="top" constant="24" id="z7w-MT-u4q"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validate Crypto Address" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFZ-IA-IWk">
+                                <rect key="frame" x="35" y="43" width="343" height="156"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="43"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ItR-LD-53b" secondAttribute="bottom" constant="16" id="1x3-ND-eWb"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3hd-t2-tZE"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="leading" secondItem="WFZ-IA-IWk" secondAttribute="trailing" constant="-378" id="4Qs-00-3P3"/>
+                            <constraint firstItem="ItR-LD-53b" firstAttribute="top" secondItem="WFZ-IA-IWk" secondAttribute="bottom" constant="48" id="4jP-Xp-NCs"/>
+                            <constraint firstItem="ItR-LD-53b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="227" id="7DR-ip-hiX"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GLt-9F-CqY"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="leading" secondItem="WFZ-IA-IWk" secondAttribute="trailing" constant="-378" id="Ihl-Tw-X7y"/>
+                            <constraint firstItem="ItR-LD-53b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Nlu-hZ-FgD"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZKN-f6-fG7"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bPj-lG-LUQ"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="btH-Db-M40"/>
+                            <constraint firstItem="WFZ-IA-IWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cRq-pi-BEh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ItR-LD-53b" secondAttribute="trailing" constant="16" id="eGc-xp-LYl"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f6p-tn-RA8"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g8b-2z-iX5"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pJP-3M-5Tc"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qWK-lQ-9eC"/>
+                            <constraint firstItem="ppR-cd-yYR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qt9-Lb-mvA"/>
+                            <constraint firstItem="WFZ-IA-IWk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="tKT-ne-43c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ppR-cd-yYR" secondAttribute="trailing" id="ufe-w1-tbf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressField" destination="qMe-1i-4Xw" id="mdR-C8-Cnm"/>
+                        <outlet property="cryptoField" destination="WLb-HF-BrW" id="TRL-2K-02r"/>
