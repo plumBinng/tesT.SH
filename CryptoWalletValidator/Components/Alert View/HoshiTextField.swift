@@ -67,3 +67,29 @@ import UIKit
         didSet {
             updateBorder()
             updatePlaceholder()
+        }
+    }
+    
+    private let borderThickness: (active: CGFloat, inactive: CGFloat) = (active: 2, inactive: 0.5)
+    private let placeholderInsets = CGPoint(x: 0, y: 6)
+    private let textFieldInsets = CGPoint(x: 0, y: 12)
+    private let inactiveBorderLayer = CALayer()
+    private let activeBorderLayer = CALayer()
+    private var activePlaceholderPoint: CGPoint = CGPoint.zero
+    
+    // MARK: - TextFieldEffects
+    
+    override open func drawViewsForRect(_ rect: CGRect) {
+        let frame = CGRect(origin: CGPoint.zero, size: CGSize(width: rect.size.width, height: rect.size.height))
+        
+        placeholderLabel.frame = frame.insetBy(dx: placeholderInsets.x, dy: placeholderInsets.y)
+        placeholderLabel.font = placeholderFontFromFont(font!)
+        
+        updateBorder()
+        updatePlaceholder()
+        
+        layer.addSublayer(inactiveBorderLayer)
+        layer.addSublayer(activeBorderLayer)
+        addSubview(placeholderLabel)
+    }
+    
