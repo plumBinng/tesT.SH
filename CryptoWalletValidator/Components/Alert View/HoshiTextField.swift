@@ -166,3 +166,25 @@ import UIKit
         switch self.textAlignment {
         case .center:
             originX += textRect.size.width/2 - placeholderLabel.bounds.width/2
+        case .right:
+            originX += textRect.size.width - placeholderLabel.bounds.width
+        default:
+            break
+        }
+        placeholderLabel.frame = CGRect(x: originX, y: textRect.height/2,
+                                        width: placeholderLabel.bounds.width, height: placeholderLabel.bounds.height)
+        activePlaceholderPoint = CGPoint(x: placeholderLabel.frame.origin.x, y: placeholderLabel.frame.origin.y - placeholderLabel.frame.size.height - placeholderInsets.y)
+        
+    }
+    
+    // MARK: - Overrides
+    
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.offsetBy(dx: textFieldInsets.x, dy: textFieldInsets.y)
+    }
+    
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.offsetBy(dx: textFieldInsets.x, dy: textFieldInsets.y)
+    }
+    
+}
