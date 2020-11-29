@@ -122,3 +122,47 @@ import UIKit
                 self.animationCompletionHandler?(.textDisplay)
             })
             
+            activeBorderLayer.frame = self.rectForBorder(self.borderThickness.active, isFilled: false)
+        }
+    }
+    
+    // MARK: - Private
+    
+    private func updateBorder() {
+        inactiveBorderLayer.frame = rectForBorder(borderThickness.inactive, isFilled: true)
+        inactiveBorderLayer.backgroundColor = borderInactiveColor?.cgColor
+        
+        activeBorderLayer.frame = rectForBorder(borderThickness.active, isFilled: false)
+        activeBorderLayer.backgroundColor = borderActiveColor?.cgColor
+    }
+    
+    private func updatePlaceholder() {
+        placeholderLabel.text = placeholder
+        placeholderLabel.textColor = placeholderColor
+        placeholderLabel.sizeToFit()
+        layoutPlaceholderInTextRect()
+        
+        if isFirstResponder || text!.isNotEmpty {
+            animateViewsForTextEntry()
+        }
+    }
+    
+    private func placeholderFontFromFont(_ font: UIFont) -> UIFont! {
+        let smallerFont = UIFont(name: font.fontName, size: font.pointSize * placeholderFontScale)
+        return smallerFont
+    }
+    
+    private func rectForBorder(_ thickness: CGFloat, isFilled: Bool) -> CGRect {
+        if isFilled {
+            return CGRect(origin: CGPoint(x: 0, y: frame.height-thickness), size: CGSize(width: frame.width, height: thickness))
+        } else {
+            return CGRect(origin: CGPoint(x: 0, y: frame.height-thickness), size: CGSize(width: 0, height: thickness))
+        }
+    }
+    
+    private func layoutPlaceholderInTextRect() {
+        let textRect = self.textRect(forBounds: bounds)
+        var originX = textRect.origin.x
+        switch self.textAlignment {
+        case .center:
+            originX += textRect.size.width/2 - placeholderLabel.bounds.width/2
