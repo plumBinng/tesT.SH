@@ -46,3 +46,35 @@ open class TextFieldEffects : UITextField {
     /**
      Creates all the animations that are used to leave the textfield in the "entering text" state.
      */
+    open func animateViewsForTextEntry() {
+        fatalError("\(#function) must be overridden")
+    }
+    
+    /**
+     Creates all the animations that are used to leave the textfield in the "display input text" state.
+     */
+    open func animateViewsForTextDisplay() {
+        fatalError("\(#function) must be overridden")
+    }
+    
+    /**
+     The animation completion handler is the best place to be notified when the text field animation has ended.
+     */
+    open var animationCompletionHandler: AnimationCompletionHandler?
+    
+    /**
+     Draws the receiver’s image within the passed-in rectangle.
+     
+     - parameter rect:    The portion of the view’s bounds that needs to be updated.
+     */
+    open func drawViewsForRect(_ rect: CGRect) {
+        fatalError("\(#function) must be overridden")
+    }
+    
+    open func updateViewsForBoundsChange(_ bounds: CGRect) {
+        fatalError("\(#function) must be overridden")
+    }
+    
+    // MARK: - Overrides
+    
+    override open func draw(_ rect: CGRect) {
