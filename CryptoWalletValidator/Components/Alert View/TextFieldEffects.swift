@@ -78,3 +78,26 @@ open class TextFieldEffects : UITextField {
     // MARK: - Overrides
     
     override open func draw(_ rect: CGRect) {
+        // FIXME: Short-circuit if the view is currently selected. iOS 11 introduced
+        // a setNeedsDisplay when you focus on a textfield, calling this method again
+        // and messing up some of the effects due to the logic contained inside these
+        // methods.
+        // This is just a "quick fix", something better needs to come along.
+        guard isFirstResponder == false else { return }
+        drawViewsForRect(rect)
+    }
+    
+    override open func drawPlaceholder(in rect: CGRect) {
+        // Don't draw any placeholders
+    }
+    
+    override open var text: String? {
+        didSet {
+            if let text = text, text.isNotEmpty {
+                animateViewsForTextEntry()
+            } else {
+                animateViewsForTextDisplay()
+            }
+        }
+    }
+    
