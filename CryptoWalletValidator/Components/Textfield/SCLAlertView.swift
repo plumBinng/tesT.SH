@@ -41,3 +41,29 @@ public enum SCLAlertViewStyle {
         case .error:
             return 0xC1272D
         case .notice:
+            return 0x727375
+        case .warning:
+            return 0xFFD110
+        case .info:
+            return 0x2866BF
+        case .edit:
+            return 0xA429FF
+        case .wait:
+            return 0xD62DA5
+        case .question:
+            return 0x727375
+        }
+        
+    }
+
+}
+
+// Animation Styles
+public enum SCLAnimationStyle {
+    case noAnimation, topToBottom, bottomToTop, leftToRight, rightToLeft
+}
+
+// Action Types
+public enum SCLActionType {
+    case none, selector, closure
+}
