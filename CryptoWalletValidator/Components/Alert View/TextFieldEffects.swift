@@ -132,3 +132,4 @@ open class TextFieldEffects : UITextField {
     override open func prepareForInterfaceBuilder() {
         drawViewsForRect(frame)
     }
+}
