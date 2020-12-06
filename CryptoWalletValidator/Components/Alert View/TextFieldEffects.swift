@@ -101,3 +101,34 @@ open class TextFieldEffects : UITextField {
         }
     }
     
+    // MARK: - UITextField Observing
+    
+    override open func willMove(toSuperview newSuperview: UIView!) {
+        if newSuperview != nil {
+            NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidEndEditing), name: NSNotification.Name.UITextFieldTextDidEndEditing, object: self)
+            
+            NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidBeginEditing), name: NSNotification.Name.UITextFieldTextDidBeginEditing, object: self)
+        } else {
+            NotificationCenter.default.removeObserver(self)
+        }
+    }
+    
+    /**
+     The textfield has started an editing session.
+     */
+    @objc open func textFieldDidBeginEditing() {
+        animateViewsForTextEntry()
+    }
+    
+    /**
+     The textfield has ended an editing session.
+     */
+    @objc open func textFieldDidEndEditing() {
+        animateViewsForTextDisplay()
+    }
+    
+    // MARK: - Interface Builder
+    
+    override open func prepareForInterfaceBuilder() {
+        drawViewsForRect(frame)
+    }
