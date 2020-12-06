@@ -67,3 +67,27 @@ public enum SCLAnimationStyle {
 public enum SCLActionType {
     case none, selector, closure
 }
+
+public enum SCLAlertButtonLayout {
+    case horizontal, vertical
+}
+// Button sub-class
+open class SCLButton: UIButton {
+    var actionType = SCLActionType.none
+    var target:AnyObject!
+    var selector:Selector!
+    var action:(()->Void)!
+    var customBackgroundColor:UIColor?
+    var customTextColor:UIColor?
+    var initialTitle:String!
+    var showTimeout:ShowTimeoutConfiguration?
+    
+    public struct ShowTimeoutConfiguration {
+        let prefix: String
+        let suffix: String
+        
+        public init(prefix: String = "", suffix: String = "") {
+            self.prefix = prefix
+            self.suffix = suffix
+        }
+    }
