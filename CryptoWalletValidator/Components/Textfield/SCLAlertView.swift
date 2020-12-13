@@ -292,3 +292,31 @@ open class SCLAlertView: UIViewController {
         setup()
     }
     
+    override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        appearance = SCLAppearance()
+        super.init(nibName:nibNameOrNil, bundle:nibBundleOrNil)
+    }
+    
+    fileprivate func setup() {
+        // Set up main view
+        view.frame = UIScreen.main.bounds
+        view.autoresizingMask = [UIViewAutoresizing.flexibleHeight, UIViewAutoresizing.flexibleWidth]
+        view.backgroundColor = UIColor(red:0, green:0, blue:0, alpha:appearance.kDefaultShadowOpacity)
+        view.addSubview(baseView)
+        // Base View
+        baseView.frame = view.frame
+        baseView.addSubview(contentView)
+        // Content View
+        contentView.layer.cornerRadius = appearance.contentViewCornerRadius
+        contentView.layer.masksToBounds = true
+        contentView.layer.borderWidth = 0.5
+        contentView.addSubview(labelTitle)
+        contentView.addSubview(viewText)
+        // Circle View
+        circleBG.backgroundColor = appearance.circleBackgroundColor
+        circleBG.layer.cornerRadius = circleBG.frame.size.height / 2
+        baseView.addSubview(circleBG)
+        circleBG.addSubview(circleView)
+        let x = (kCircleHeightBackground - appearance.kCircleHeight) / 2
+        circleView.frame = CGRect(x:x, y:x+appearance.kCircleTopPosition, width:appearance.kCircleHeight, height:appearance.kCircleHeight)
+        circleView.layer.cornerRadius = circleView.frame.size.height / 2
