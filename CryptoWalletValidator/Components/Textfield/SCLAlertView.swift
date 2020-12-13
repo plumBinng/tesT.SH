@@ -199,3 +199,41 @@ open class SCLAlertView: UIViewController {
             self.kTextViewdHeight = kTextViewdHeight
             self.kButtonHeight = kButtonHeight
 			self.circleBackgroundColor = circleBackgroundColor
+            self.contentViewColor = contentViewColor
+            self.contentViewBorderColor = contentViewBorderColor
+            self.titleColor = titleColor
+            
+            self.kTitleFont = kTitleFont
+            self.kTitleMinimumScaleFactor = kTitleMinimumScaleFactor
+            self.kTextFont = kTextFont
+            self.kButtonFont = kButtonFont
+            
+            self.disableTapGesture = disableTapGesture
+            self.showCloseButton = showCloseButton
+            self.showCircularIcon = showCircularIcon
+            self.shouldAutoDismiss = shouldAutoDismiss
+            self.contentViewCornerRadius = contentViewCornerRadius
+            self.fieldCornerRadius = fieldCornerRadius
+            self.buttonCornerRadius = buttonCornerRadius
+            
+            self.hideWhenBackgroundViewIsTapped = hideWhenBackgroundViewIsTapped
+            self.dynamicAnimatorActive = dynamicAnimatorActive
+            self.buttonsLayout = buttonsLayout
+            
+            self.activityIndicatorStyle = activityIndicatorStyle
+        }
+        
+        mutating func setkWindowHeight(_ kWindowHeight:CGFloat) {
+            self.kWindowHeight = kWindowHeight
+        }
+        
+        mutating func setkTextHeight(_ kTextHeight:CGFloat) {
+            self.kTextHeight = kTextHeight
+        }
+    }
+    
+    public struct SCLTimeoutConfiguration {
+        
+        public typealias ActionType = () -> Void
+        
+        var value: TimeInterval
