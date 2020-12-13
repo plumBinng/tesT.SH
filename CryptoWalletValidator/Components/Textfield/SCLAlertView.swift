@@ -237,3 +237,36 @@ open class SCLAlertView: UIViewController {
         public typealias ActionType = () -> Void
         
         var value: TimeInterval
+        let action: ActionType
+        
+        mutating func increaseValue(by: Double) {
+            self.value = value + by
+        }
+        
+        public init(timeoutValue: TimeInterval, timeoutAction: @escaping ActionType) {
+            self.value = timeoutValue
+            self.action = timeoutAction
+        }
+        
+    }
+    
+    var appearance: SCLAppearance!
+    
+    // UI Colour
+    var viewColor = UIColor()
+    
+    // UI Options
+    open var iconTintColor: UIColor?
+    open var customSubview : UIView?
+    
+    // Members declaration
+    var baseView = UIView()
+    var labelTitle = UILabel()
+    var viewText = UITextView()
+    var contentView = UIView()
+    var circleBG = UIView(frame:CGRect(x:0, y:0, width:kCircleHeightBackground, height:kCircleHeightBackground))
+    var circleView = UIView()
+    var circleIconView : UIView?
+    var timeout: SCLTimeoutConfiguration?
+    var showTimeoutTimer: Timer?
+    var timeoutTimer: Timer?
