@@ -112,3 +112,28 @@ open class SCLAlertViewResponder {
     
     // Initialisation and Title/Subtitle/Close functions
     public init(alertview: SCLAlertView) {
+        self.alertview = alertview
+    }
+    
+    open func setTitle(_ title: String) {
+        self.alertview.labelTitle.text = title
+    }
+    
+    open func setSubTitle(_ subTitle: String) {
+        self.alertview.viewText.text = subTitle
+    }
+    
+    open func close() {
+        self.alertview.hideView()
+    }
+    
+    open func setDismissBlock(_ dismissBlock: @escaping DismissBlock) {
+        self.alertview.dismissBlock = dismissBlock
+    }
+}
+
+let kCircleHeightBackground: CGFloat = 62.0
+let uniqueTag: Int = Int(arc4random() % UInt32(Int32.max))
+let uniqueAccessibilityIdentifier: String = "SCLAlertView"
+
+public typealias DismissBlock = () -> Void
