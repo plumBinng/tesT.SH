@@ -91,3 +91,24 @@ open class SCLButton: UIButton {
             self.suffix = suffix
         }
     }
+    
+    public init() {
+        super.init(frame: CGRect.zero)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder:aDecoder)
+    }
+    
+    override public init(frame:CGRect) {
+        super.init(frame:frame)
+    }
+}
+
+// Allow alerts to be closed/renamed in a chainable manner
+// Example: SCLAlertView().showSuccess(self, title: "Test", subTitle: "Value").close()
+open class SCLAlertViewResponder {
+    let alertview: SCLAlertView
+    
+    // Initialisation and Title/Subtitle/Close functions
+    public init(alertview: SCLAlertView) {
