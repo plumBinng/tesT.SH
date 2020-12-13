@@ -270,3 +270,25 @@ open class SCLAlertView: UIViewController {
     var timeout: SCLTimeoutConfiguration?
     var showTimeoutTimer: Timer?
     var timeoutTimer: Timer?
+    var dismissBlock : DismissBlock?
+    fileprivate var inputs = [UITextField]()
+    fileprivate var input = [UITextView]()
+    internal var buttons = [SCLButton]()
+    fileprivate var selfReference: SCLAlertView?
+    
+    public init(appearance: SCLAppearance) {
+        self.appearance = appearance
+        super.init(nibName:nil, bundle:nil)
+        setup()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
+    required public init() {
+        appearance = SCLAppearance()
+        super.init(nibName:nil, bundle:nil)
+        setup()
+    }
+    
