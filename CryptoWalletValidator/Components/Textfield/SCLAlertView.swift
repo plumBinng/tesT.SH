@@ -137,3 +137,39 @@ let uniqueTag: Int = Int(arc4random() % UInt32(Int32.max))
 let uniqueAccessibilityIdentifier: String = "SCLAlertView"
 
 public typealias DismissBlock = () -> Void
+
+// The Main Class
+open class SCLAlertView: UIViewController {
+    
+    public struct SCLAppearance {
+        let kDefaultShadowOpacity: CGFloat
+        let kCircleTopPosition: CGFloat
+        let kCircleBackgroundTopPosition: CGFloat
+        let kCircleHeight: CGFloat
+        let kCircleIconHeight: CGFloat
+        let kTitleTop:CGFloat
+        let kTitleHeight:CGFloat
+        let kTitleMinimumScaleFactor: CGFloat
+        let kWindowWidth: CGFloat
+        var kWindowHeight: CGFloat
+        var kTextHeight: CGFloat
+        let kTextFieldHeight: CGFloat
+        let kTextViewdHeight: CGFloat
+        let kButtonHeight: CGFloat
+		let circleBackgroundColor: UIColor
+        let contentViewColor: UIColor
+        let contentViewBorderColor: UIColor
+        let titleColor: UIColor
+        
+        // Fonts
+        let kTitleFont: UIFont
+        let kTextFont: UIFont
+        let kButtonFont: UIFont
+        
+        // UI Options
+        var disableTapGesture: Bool
+        var showCloseButton: Bool
+        var showCircularIcon: Bool
+        var shouldAutoDismiss: Bool // Set this false to 'Disable' Auto hideView when SCLButton is tapped
+        var contentViewCornerRadius : CGFloat
+        var fieldCornerRadius : CGFloat
