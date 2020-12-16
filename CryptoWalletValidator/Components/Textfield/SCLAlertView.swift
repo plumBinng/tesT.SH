@@ -354,3 +354,38 @@ open class SCLAlertView: UIViewController {
         super.viewWillLayoutSubviews()
         let rv = UIApplication.shared.keyWindow! as UIWindow
         let sz = rv.frame.size
+        
+        // Set background frame
+        view.frame.size = sz
+
+        let hMargin: CGFloat = 12
+        let defaultTopOffset: CGFloat = 32
+
+        // get actual height of title text
+        var titleActualHeight: CGFloat = 0
+        if let title = labelTitle.text {
+          titleActualHeight = title.heightWithConstrainedWidth(width: appearance.kWindowWidth - hMargin * 2, font: labelTitle.font) + 10
+          // get the larger height for the title text
+          titleActualHeight = (titleActualHeight > appearance.kTitleHeight ? titleActualHeight : appearance.kTitleHeight)
+        }
+
+        // computing the right size to use for the textView
+        let maxHeight = sz.height - 100 // max overall height
+        var consumedHeight = CGFloat(0)
+        consumedHeight += (titleActualHeight > 0 ? appearance.kTitleTop + titleActualHeight : defaultTopOffset)
+        consumedHeight += 14
+        
+        if appearance.buttonsLayout == .vertical {
+            consumedHeight += appearance.kButtonHeight * CGFloat(buttons.count)
+        } else {
+            consumedHeight += appearance.kButtonHeight
+        }
+        consumedHeight += appearance.kTextFieldHeight * CGFloat(inputs.count)
+        consumedHeight += appearance.kTextViewdHeight * CGFloat(input.count)
+        let maxViewTextHeight = maxHeight - consumedHeight
+        let viewTextWidth = appearance.kWindowWidth - hMargin * 2
+        var viewTextHeight = appearance.kTextHeight
+        
+        // Check if there is a custom subview and add it over the textview
+        if let customSubview = customSubview {
+            viewTextHeight = min(customSubview.frame.height, maxViewTextHeight)
