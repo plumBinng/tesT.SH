@@ -421,3 +421,23 @@ open class SCLAlertView: UIViewController {
         
         // Subtitle
         y = titleActualHeight > 0 ? appearance.kTitleTop + titleActualHeight + titleOffset : defaultTopOffset
+        viewText.frame = CGRect(x:hMargin, y:y, width: appearance.kWindowWidth - hMargin * 2, height:appearance.kTextHeight)
+        viewText.frame = CGRect(x:hMargin, y:y, width: viewTextWidth, height:viewTextHeight)
+        // Text fields
+        y += viewTextHeight + 14.0
+        for txt in inputs {
+            txt.frame = CGRect(x:hMargin, y:y, width:appearance.kWindowWidth - hMargin * 2, height:30)
+            txt.layer.cornerRadius = appearance.fieldCornerRadius
+            y += appearance.kTextFieldHeight
+        }
+        for txt in input {
+            txt.frame = CGRect(x:hMargin, y:y, width:appearance.kWindowWidth - hMargin * 2, height:appearance.kTextViewdHeight - hMargin)
+            //txt.layer.cornerRadius = fieldCornerRadius
+            y += appearance.kTextViewdHeight
+        }
+        // Buttons
+        let numberOfButton = CGFloat(buttons.count)
+        let buttonsSpace = numberOfButton >= 1 ? CGFloat(10) * (numberOfButton - 1) : 0
+        let widthEachButton = (appearance.kWindowWidth - 24 - buttonsSpace) / numberOfButton
+        var buttonX = CGFloat(12)
+        
