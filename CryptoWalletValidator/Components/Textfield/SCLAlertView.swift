@@ -389,3 +389,35 @@ open class SCLAlertView: UIViewController {
         // Check if there is a custom subview and add it over the textview
         if let customSubview = customSubview {
             viewTextHeight = min(customSubview.frame.height, maxViewTextHeight)
+            viewText.text = ""
+            viewText.addSubview(customSubview)
+        } else {
+            // computing the right size to use for the textView
+            let suggestedViewTextSize = viewText.sizeThatFits(CGSize(width: viewTextWidth, height: CGFloat.greatestFiniteMagnitude))
+            viewTextHeight = min(suggestedViewTextSize.height, maxViewTextHeight)
+            
+            // scroll management
+            if (suggestedViewTextSize.height > maxViewTextHeight) {
+                viewText.isScrollEnabled = true
+            } else {
+                viewText.isScrollEnabled = false
+            }
+        }
+        
+        let windowHeight = consumedHeight + viewTextHeight
+        // Set frames
+        var x = (sz.width - appearance.kWindowWidth) / 2
+        var y = (sz.height - windowHeight - (appearance.kCircleHeight / 8)) / 2
+        contentView.frame = CGRect(x:x, y:y, width:appearance.kWindowWidth, height:windowHeight)
+        contentView.layer.cornerRadius = appearance.contentViewCornerRadius
+        y -= kCircleHeightBackground * 0.6
+        x = (sz.width - kCircleHeightBackground) / 2
+        circleBG.frame = CGRect(x:x, y:y+appearance.kCircleBackgroundTopPosition, width:kCircleHeightBackground, height:kCircleHeightBackground)
+        
+        //adjust Title frame based on circularIcon show/hide flag
+//        let titleOffset : CGFloat = appearance.showCircularIcon ? 0.0 : -12.0
+        let titleOffset: CGFloat = 0
+        labelTitle.frame = labelTitle.frame.offsetBy(dx: 0, dy: titleOffset)
+        
+        // Subtitle
+        y = titleActualHeight > 0 ? appearance.kTitleTop + titleActualHeight + titleOffset : defaultTopOffset
