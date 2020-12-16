@@ -320,3 +320,37 @@ open class SCLAlertView: UIViewController {
         let x = (kCircleHeightBackground - appearance.kCircleHeight) / 2
         circleView.frame = CGRect(x:x, y:x+appearance.kCircleTopPosition, width:appearance.kCircleHeight, height:appearance.kCircleHeight)
         circleView.layer.cornerRadius = circleView.frame.size.height / 2
+        // Title
+        labelTitle.numberOfLines = 0
+        labelTitle.textAlignment = .center
+        labelTitle.font = appearance.kTitleFont
+        if(appearance.kTitleMinimumScaleFactor < 1){
+            labelTitle.minimumScaleFactor = appearance.kTitleMinimumScaleFactor
+            labelTitle.adjustsFontSizeToFitWidth = true
+        }
+        labelTitle.frame = CGRect(x:12, y:appearance.kTitleTop, width: appearance.kWindowWidth - 24, height:appearance.kTitleHeight)
+        // View text
+        viewText.isEditable = false
+        viewText.isSelectable = false
+        viewText.textAlignment = .center
+        viewText.textContainerInset = UIEdgeInsets.zero
+        viewText.textContainer.lineFragmentPadding = 0;
+        viewText.font = appearance.kTextFont
+        // Colours
+        contentView.backgroundColor = appearance.contentViewColor
+        viewText.backgroundColor = appearance.contentViewColor
+        labelTitle.textColor = appearance.titleColor
+        viewText.textColor = appearance.titleColor
+        contentView.layer.borderColor = appearance.contentViewBorderColor.cgColor
+        //Gesture Recognizer for tapping outside the textinput
+        if appearance.disableTapGesture == false {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SCLAlertView.tapped(_:)))
+            tapGesture.numberOfTapsRequired = 1
+            self.view.addGestureRecognizer(tapGesture)
+        }
+    }
+    
+    override open func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let rv = UIApplication.shared.keyWindow! as UIWindow
+        let sz = rv.frame.size
