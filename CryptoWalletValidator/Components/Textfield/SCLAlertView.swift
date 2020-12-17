@@ -441,3 +441,26 @@ open class SCLAlertView: UIViewController {
         let widthEachButton = (appearance.kWindowWidth - 24 - buttonsSpace) / numberOfButton
         var buttonX = CGFloat(12)
         
+        switch appearance.buttonsLayout {
+        case .vertical:
+            for btn in buttons {
+                btn.frame = CGRect(x:12, y:y, width:appearance.kWindowWidth - 24, height:35)
+                btn.layer.cornerRadius = appearance.buttonCornerRadius
+                y += appearance.kButtonHeight
+            }
+        case .horizontal:
+            for btn in buttons {
+                btn.frame = CGRect(x:buttonX, y:y, width: widthEachButton, height:35)
+                btn.layer.cornerRadius = appearance.buttonCornerRadius
+                buttonX += widthEachButton
+                buttonX += buttonsSpace
+            }
+        }
+    }
+    
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(SCLAlertView.keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(SCLAlertView.keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
+    }
+    
