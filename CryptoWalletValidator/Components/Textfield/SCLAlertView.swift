@@ -464,3 +464,37 @@ open class SCLAlertView: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(SCLAlertView.keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
     }
     
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override open func touchesEnded(_ touches:Set<UITouch>, with event:UIEvent?) {
+        if event?.touches(for: view)?.count > 0 {
+            view.endEditing(true)
+        }
+    }
+    
+    open func addTextField(_ title:String?=nil)->UITextField {
+        // Update view height
+        appearance.setkWindowHeight(appearance.kWindowHeight + appearance.kTextFieldHeight)
+        // Add text field
+        let txt = UITextField()
+        txt.borderStyle = UITextBorderStyle.roundedRect
+        txt.font = appearance.kTextFont
+        txt.autocapitalizationType = UITextAutocapitalizationType.words
+        txt.clearButtonMode = UITextFieldViewMode.whileEditing
+        
+        txt.layer.masksToBounds = true
+        txt.layer.borderWidth = 1.0
+        
+        if title != nil {
+            txt.placeholder = title!
+        }
+        
+        contentView.addSubview(txt)
+        inputs.append(txt)
+        return txt
+    }
+    
