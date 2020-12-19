@@ -498,3 +498,33 @@ open class SCLAlertView: UIViewController {
         return txt
     }
     
+    open func addTextView()->UITextView {
+        // Update view height
+        appearance.setkWindowHeight(appearance.kWindowHeight + appearance.kTextViewdHeight)
+        // Add text view
+        let txt = UITextView()
+        // No placeholder with UITextView but you can use KMPlaceholderTextView library 
+        txt.font = appearance.kTextFont
+        //txt.autocapitalizationType = UITextAutocapitalizationType.Words
+        //txt.clearButtonMode = UITextFieldViewMode.WhileEditing
+        txt.layer.masksToBounds = true
+        txt.layer.borderWidth = 1.0
+        contentView.addSubview(txt)
+        input.append(txt)
+        return txt
+    }
+    
+    @discardableResult
+    open func addButton(_ title:String, backgroundColor:UIColor? = nil, textColor:UIColor? = nil, showTimeout:SCLButton.ShowTimeoutConfiguration? = nil, action:@escaping ()->Void)->SCLButton {
+        let btn = addButton(title, backgroundColor: backgroundColor, textColor: textColor, showTimeout: showTimeout)
+        btn.actionType = SCLActionType.closure
+        btn.action = action
+        btn.addTarget(self, action:#selector(SCLAlertView.buttonTapped(_:)), for:.touchUpInside)
+        btn.addTarget(self, action:#selector(SCLAlertView.buttonTapDown(_:)), for:[.touchDown, .touchDragEnter])
+        btn.addTarget(self, action:#selector(SCLAlertView.buttonRelease(_:)), for:[.touchUpInside, .touchUpOutside, .touchCancel, .touchDragOutside] )
+        return btn
+    }
+    
+    @discardableResult
+    open func addButton(_ title:String, backgroundColor:UIColor? = nil, textColor:UIColor? = nil, showTimeout:SCLButton.ShowTimeoutConfiguration? = nil, target:AnyObject, selector:Selector)->SCLButton {
+        let btn = addButton(title, backgroundColor: backgroundColor, textColor: textColor, showTimeout: showTimeout)
