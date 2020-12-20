@@ -528,3 +528,33 @@ open class SCLAlertView: UIViewController {
     @discardableResult
     open func addButton(_ title:String, backgroundColor:UIColor? = nil, textColor:UIColor? = nil, showTimeout:SCLButton.ShowTimeoutConfiguration? = nil, target:AnyObject, selector:Selector)->SCLButton {
         let btn = addButton(title, backgroundColor: backgroundColor, textColor: textColor, showTimeout: showTimeout)
+        btn.actionType = SCLActionType.selector
+        btn.target = target
+        btn.selector = selector
+        btn.addTarget(self, action:#selector(SCLAlertView.buttonTapped(_:)), for:.touchUpInside)
+        btn.addTarget(self, action:#selector(SCLAlertView.buttonTapDown(_:)), for:[.touchDown, .touchDragEnter])
+        btn.addTarget(self, action:#selector(SCLAlertView.buttonRelease(_:)), for:[.touchUpInside, .touchUpOutside, .touchCancel, .touchDragOutside] )
+        return btn
+    }
+    
+    @discardableResult
+    fileprivate func addButton(_ title:String, backgroundColor:UIColor? = nil, textColor:UIColor? = nil, showTimeout:SCLButton.ShowTimeoutConfiguration? = nil)->SCLButton {
+        // Update view height
+        appearance.setkWindowHeight(appearance.kWindowHeight + appearance.kButtonHeight)
+        
+        // Add button
+        let btn = SCLButton()
+        btn.layer.masksToBounds = true
+        btn.setTitle(title, for: UIControlState())
+        btn.titleLabel?.font = appearance.kButtonFont
+        btn.customBackgroundColor = backgroundColor
+        btn.customTextColor = textColor
+        btn.initialTitle = title
+        btn.showTimeout = showTimeout
+        contentView.addSubview(btn)
+        buttons.append(btn)
+        return btn
+    }
+    
+    @objc func buttonTapped(_ btn:SCLButton) {
+        if btn.actionType == SCLActionType.closure {
