@@ -558,3 +558,30 @@ open class SCLAlertView: UIViewController {
     
     @objc func buttonTapped(_ btn:SCLButton) {
         if btn.actionType == SCLActionType.closure {
+            btn.action()
+        } else if btn.actionType == SCLActionType.selector {
+            let ctrl = UIControl()
+            ctrl.sendAction(btn.selector, to:btn.target, for:nil)
+        } else {
+            print("Unknow action type for button")
+        }
+        
+        if(self.view.alpha != 0.0 && appearance.shouldAutoDismiss){ hideView() }
+    }
+    
+    
+    @objc func buttonTapDown(_ btn:SCLButton) {
+        var hue : CGFloat = 0
+        var saturation : CGFloat = 0
+        var brightness : CGFloat = 0
+        var alpha : CGFloat = 0
+        let pressBrightnessFactor = 0.85
+        btn.backgroundColor?.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        brightness = brightness * CGFloat(pressBrightnessFactor)
+        btn.backgroundColor = UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    }
+    
+    @objc func buttonRelease(_ btn:SCLButton) {
+        btn.backgroundColor = btn.customBackgroundColor ?? viewColor
+    }
+    
