@@ -754,3 +754,29 @@ open class SCLAlertView: UIViewController {
             iconImage = checkCircleIconImage(circleIconImage, defaultImage:SCLAlertViewStyleKit.imageOfQuestion)
         }
         
+        // Title
+        if !title.isEmpty {
+            self.labelTitle.text = title
+            let actualHeight = title.heightWithConstrainedWidth(width: appearance.kWindowWidth - 24, font: self.labelTitle.font)
+            self.labelTitle.frame = CGRect(x:12, y:appearance.kTitleTop, width: appearance.kWindowWidth - 24, height:actualHeight)
+        }
+        
+        // Subtitle
+        if !subTitle.isEmpty {
+            viewText.text = subTitle
+            // Adjust text view size, if necessary
+            let str = subTitle as NSString
+            let attr = [NSAttributedStringKey.font:viewText.font ?? UIFont()]
+            let sz = CGSize(width: appearance.kWindowWidth - 24, height:90)
+            let r = str.boundingRect(with: sz, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes:attr, context:nil)
+            let ht = ceil(r.size.height)
+            if ht < appearance.kTextHeight {
+                appearance.kWindowHeight -= (appearance.kTextHeight - ht)
+                appearance.setkTextHeight(ht)
+            }
+        }
+        
+        // Done button
+        if appearance.showCloseButton {
+            _ = addButton(completeText ?? "Done", target:self, selector:#selector(SCLAlertView.hideView))
+        }
