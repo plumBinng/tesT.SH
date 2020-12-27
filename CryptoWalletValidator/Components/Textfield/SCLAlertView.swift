@@ -693,3 +693,35 @@ open class SCLAlertView: UIViewController {
     
     @discardableResult
     open func showEdit(_ title: String, subTitle: String, closeButtonTitle:String?=nil, timeout:SCLTimeoutConfiguration?=nil, colorStyle: UInt=SCLAlertViewStyle.edit.defaultColorInt, colorTextButton: UInt=0xFFFFFF, circleIconImage: UIImage? = nil, animationStyle: SCLAnimationStyle = .topToBottom) -> SCLAlertViewResponder {
+        return showTitle(title, subTitle: subTitle, timeout: timeout, completeText:closeButtonTitle, style: .edit, colorStyle: colorStyle, colorTextButton: colorTextButton, circleIconImage: circleIconImage, animationStyle: animationStyle)
+    }
+    
+    // showTitle(view, title, subTitle, style)
+    @discardableResult
+    open func showTitle(_ title: String, subTitle: String, style: SCLAlertViewStyle, closeButtonTitle:String?=nil, timeout:SCLTimeoutConfiguration?=nil, colorStyle: UInt?=0x000000, colorTextButton: UInt=0xFFFFFF, circleIconImage: UIImage? = nil, animationStyle: SCLAnimationStyle = .topToBottom) -> SCLAlertViewResponder {
+        
+        return showTitle(title, subTitle: subTitle, timeout:timeout, completeText:closeButtonTitle, style: style, colorStyle: colorStyle, colorTextButton: colorTextButton, circleIconImage: circleIconImage, animationStyle: animationStyle)
+    }
+    
+    // showTitle(view, title, subTitle, timeout, style)
+    @discardableResult
+    open func showTitle(_ title: String, subTitle: String, timeout: SCLTimeoutConfiguration?, completeText: String?, style: SCLAlertViewStyle, colorStyle: UInt?=0x000000, colorTextButton: UInt?=0xFFFFFF, circleIconImage: UIImage? = nil, animationStyle: SCLAnimationStyle = .topToBottom) -> SCLAlertViewResponder {
+        selfReference = self
+        view.alpha = 0
+        view.tag = uniqueTag
+        view.accessibilityIdentifier = uniqueAccessibilityIdentifier
+        let rv = UIApplication.shared.keyWindow! as UIWindow
+        rv.addSubview(view)
+        view.frame = rv.bounds
+        baseView.frame = rv.bounds
+        
+        // Alert colour/icon
+        viewColor = UIColor()
+        var iconImage: UIImage?
+        let colorInt = colorStyle ?? style.defaultColorInt
+        viewColor = UIColorFromRGB(colorInt)
+        
+        // Icon style
+        switch style {
+        case .success:
+            
