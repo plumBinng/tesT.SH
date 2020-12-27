@@ -616,3 +616,29 @@ open class SCLAlertView: UIViewController {
     @objc func keyboardWillHide(_ notification: Notification) {
         if(keyboardHasBeenShown){//This could happen on the simulator (keyboard will be hidden)
             if(self.tmpContentViewFrameOrigin != nil){
+                self.contentView.frame.origin.y = self.tmpContentViewFrameOrigin!.y
+                self.tmpContentViewFrameOrigin = nil
+            }
+            if(self.tmpCircleViewFrameOrigin != nil){
+                self.circleBG.frame.origin.y = self.tmpCircleViewFrameOrigin!.y
+                self.tmpCircleViewFrameOrigin = nil
+            }
+            
+            keyboardHasBeenShown = false
+        }
+    }
+    
+    //Dismiss keyboard when tapped outside textfield & close SCLAlertView when hideWhenBackgroundViewIsTapped
+    @objc func tapped(_ gestureRecognizer: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+        
+        if let tappedView = gestureRecognizer.view , tappedView.hitTest(gestureRecognizer.location(in: tappedView), with: nil) == baseView && appearance.hideWhenBackgroundViewIsTapped {
+            
+            hideView()
+        }
+    }
+    
+    // showCustom(view, title, subTitle, UIColor, UIImage)
+    @discardableResult
+    open func showCustom(_ title: String, subTitle: String, color: UIColor, icon: UIImage, closeButtonTitle:String?=nil, timeout:SCLTimeoutConfiguration?=nil, colorStyle: UInt=SCLAlertViewStyle.success.defaultColorInt, colorTextButton: UInt=0xFFFFFF, circleIconImage: UIImage? = nil, animationStyle: SCLAnimationStyle = .topToBottom) -> SCLAlertViewResponder {
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
