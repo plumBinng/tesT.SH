@@ -585,3 +585,34 @@ open class SCLAlertView: UIViewController {
         btn.backgroundColor = btn.customBackgroundColor ?? viewColor
     }
     
+    var tmpContentViewFrameOrigin: CGPoint?
+    var tmpCircleViewFrameOrigin: CGPoint?
+    var keyboardHasBeenShown:Bool = false
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        keyboardHasBeenShown = true
+        
+        guard let userInfo = (notification as NSNotification).userInfo else {return}
+        guard let endKeyBoardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.minY else {return}
+        
+        if tmpContentViewFrameOrigin == nil {
+            tmpContentViewFrameOrigin = self.contentView.frame.origin
+        }
+        
+        if tmpCircleViewFrameOrigin == nil {
+            tmpCircleViewFrameOrigin = self.circleBG.frame.origin
+        }
+        
+        var newContentViewFrameY = self.contentView.frame.maxY - endKeyBoardFrame
+        if newContentViewFrameY < 0 {
+            newContentViewFrameY = 0
+        }
+        
+        let newBallViewFrameY = self.circleBG.frame.origin.y - newContentViewFrameY
+        self.contentView.frame.origin.y -= newContentViewFrameY
+        self.circleBG.frame.origin.y = newBallViewFrameY
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        if(keyboardHasBeenShown){//This could happen on the simulator (keyboard will be hidden)
+            if(self.tmpContentViewFrameOrigin != nil){
