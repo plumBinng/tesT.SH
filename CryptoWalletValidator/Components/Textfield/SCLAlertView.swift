@@ -844,3 +844,38 @@ open class SCLAlertView: UIViewController {
         }
         
         // Animate in the alert view
+        self.showAnimation(animationStyle)
+       
+        // Chainable objects
+        return SCLAlertViewResponder(alertview: self)
+    }
+    
+    // Show animation in the alert view
+    fileprivate func showAnimation(_ animationStyle: SCLAnimationStyle = .topToBottom, animationStartOffset: CGFloat = -400.0, boundingAnimationOffset: CGFloat = 15.0, animationDuration: TimeInterval = 0.2) {
+        
+        let rv = UIApplication.shared.keyWindow! as UIWindow
+        var animationStartOrigin = self.baseView.frame.origin
+        var animationCenter : CGPoint = rv.center
+        
+        switch animationStyle {
+
+        case .noAnimation:
+            self.view.alpha = 1.0
+            return;
+            
+        case .topToBottom:
+            animationStartOrigin = CGPoint(x: animationStartOrigin.x, y: self.baseView.frame.origin.y + animationStartOffset)
+            animationCenter = CGPoint(x: animationCenter.x, y: animationCenter.y + boundingAnimationOffset)
+            
+        case .bottomToTop:
+            animationStartOrigin = CGPoint(x: animationStartOrigin.x, y: self.baseView.frame.origin.y - animationStartOffset)
+            animationCenter = CGPoint(x: animationCenter.x, y: animationCenter.y - boundingAnimationOffset)
+            
+        case .leftToRight:
+            animationStartOrigin = CGPoint(x: self.baseView.frame.origin.x + animationStartOffset, y: animationStartOrigin.y)
+            animationCenter = CGPoint(x: animationCenter.x + boundingAnimationOffset, y: animationCenter.y)
+            
+        case .rightToLeft:
+            animationStartOrigin = CGPoint(x: self.baseView.frame.origin.x - animationStartOffset, y: animationStartOrigin.y)
+            animationCenter = CGPoint(x: animationCenter.x - boundingAnimationOffset, y: animationCenter.y)
+        }
