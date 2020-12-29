@@ -780,3 +780,41 @@ open class SCLAlertView: UIViewController {
         if appearance.showCloseButton {
             _ = addButton(completeText ?? "Done", target:self, selector:#selector(SCLAlertView.hideView))
         }
+        
+        //hidden/show circular view based on the ui option
+        circleView.isHidden = !appearance.showCircularIcon
+        circleBG.isHidden = !appearance.showCircularIcon
+        
+        // Alert view colour and images
+        circleView.backgroundColor = viewColor
+        
+        // Spinner / icon
+        if style == .wait {
+            let indicator = UIActivityIndicatorView(activityIndicatorStyle: appearance.activityIndicatorStyle)
+            indicator.startAnimating()
+            circleIconView = indicator
+        }
+        else {
+            if let iconTintColor = iconTintColor {
+                circleIconView = UIImageView(image: iconImage!.withRenderingMode(.alwaysTemplate))
+                circleIconView?.tintColor = iconTintColor
+            }
+            else {
+                circleIconView = UIImageView(image: iconImage!)
+            }
+        }
+        circleView.addSubview(circleIconView!)
+        let x = (appearance.kCircleHeight - appearance.kCircleIconHeight) / 2
+        circleIconView!.frame = CGRect( x: x, y: x, width: appearance.kCircleIconHeight, height: appearance.kCircleIconHeight)
+        circleIconView?.layer.masksToBounds = true
+        
+        for txt in inputs {
+            txt.layer.borderColor = viewColor.cgColor
+        }
+        
+        for txt in input {
+            txt.layer.borderColor = viewColor.cgColor
+        }
+        
+        for btn in buttons {
+            if let customBackgroundColor = btn.customBackgroundColor {
