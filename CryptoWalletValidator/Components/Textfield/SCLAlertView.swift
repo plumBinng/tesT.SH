@@ -818,3 +818,29 @@ open class SCLAlertView: UIViewController {
         
         for btn in buttons {
             if let customBackgroundColor = btn.customBackgroundColor {
+                // Custom BackgroundColor set
+                btn.backgroundColor = customBackgroundColor
+            } else {
+                // Use default BackgroundColor derived from AlertStyle
+                btn.backgroundColor = viewColor
+            }
+            
+            if let customTextColor = btn.customTextColor {
+                // Custom TextColor set
+                btn.setTitleColor(customTextColor, for:UIControlState())
+            } else {
+                // Use default BackgroundColor derived from AlertStyle
+                btn.setTitleColor(UIColorFromRGB(colorTextButton ?? 0xFFFFFF), for:UIControlState())
+            }
+        }
+        
+        // Adding timeout
+        if let timeout = timeout {
+            self.timeout = timeout
+            timeoutTimer?.invalidate()
+            timeoutTimer = Timer.scheduledTimer(timeInterval: timeout.value, target: self, selector: #selector(SCLAlertView.hideViewTimeout), userInfo: nil, repeats: false)
+            showTimeoutTimer?.invalidate()
+            showTimeoutTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(SCLAlertView.updateShowTimeout), userInfo: nil, repeats: true)
+        }
+        
+        // Animate in the alert view
