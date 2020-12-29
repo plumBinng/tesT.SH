@@ -879,3 +879,27 @@ open class SCLAlertView: UIViewController {
             animationStartOrigin = CGPoint(x: self.baseView.frame.origin.x - animationStartOffset, y: animationStartOrigin.y)
             animationCenter = CGPoint(x: animationCenter.x - boundingAnimationOffset, y: animationCenter.y)
         }
+
+        self.baseView.frame.origin = animationStartOrigin
+        
+        if self.appearance.dynamicAnimatorActive {
+            UIView.animate(withDuration: animationDuration, animations: { 
+                self.view.alpha = 1.0
+            })
+            self.animate(item: self.baseView, center: rv.center)
+        } else {
+            UIView.animate(withDuration: animationDuration, animations: {
+                self.view.alpha = 1.0
+                 self.baseView.center = animationCenter
+                }, completion: { finished in
+                    UIView.animate(withDuration: animationDuration, animations: {
+                        self.view.alpha = 1.0
+                        self.baseView.center = rv.center
+                    })
+            })
+        }
+    }
+    
+    // DynamicAnimator function
+    var animator : UIDynamicAnimator?
+    var snapBehavior : UISnapBehavior?
