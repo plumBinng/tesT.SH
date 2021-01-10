@@ -1036,3 +1036,43 @@ class SCLAlertViewStyleKit : NSObject {
     // Drawing Methods
     class func drawCheckmark() {
         // Checkmark Shape Drawing
+        let checkmarkShapePath = UIBezierPath()
+        checkmarkShapePath.move(to: CGPoint(x: 73.25, y: 14.05))
+        checkmarkShapePath.addCurve(to: CGPoint(x: 64.51, y: 13.86), controlPoint1: CGPoint(x: 70.98, y: 11.44), controlPoint2: CGPoint(x: 66.78, y: 11.26))
+        checkmarkShapePath.addLine(to: CGPoint(x: 27.46, y: 52))
+        checkmarkShapePath.addLine(to: CGPoint(x: 15.75, y: 39.54))
+        checkmarkShapePath.addCurve(to: CGPoint(x: 6.84, y: 39.54), controlPoint1: CGPoint(x: 13.48, y: 36.93), controlPoint2: CGPoint(x: 9.28, y: 36.93))
+        checkmarkShapePath.addCurve(to: CGPoint(x: 6.84, y: 49.02), controlPoint1: CGPoint(x: 4.39, y: 42.14), controlPoint2: CGPoint(x: 4.39, y: 46.42))
+        checkmarkShapePath.addLine(to: CGPoint(x: 22.91, y: 66.14))
+        checkmarkShapePath.addCurve(to: CGPoint(x: 27.28, y: 68), controlPoint1: CGPoint(x: 24.14, y: 67.44), controlPoint2: CGPoint(x: 25.71, y: 68))
+        checkmarkShapePath.addCurve(to: CGPoint(x: 31.65, y: 66.14), controlPoint1: CGPoint(x: 28.86, y: 68), controlPoint2: CGPoint(x: 30.43, y: 67.26))
+        checkmarkShapePath.addLine(to: CGPoint(x: 73.08, y: 23.35))
+        checkmarkShapePath.addCurve(to: CGPoint(x: 73.25, y: 14.05), controlPoint1: CGPoint(x: 75.52, y: 20.75), controlPoint2: CGPoint(x: 75.7, y: 16.65))
+        checkmarkShapePath.close()
+        checkmarkShapePath.miterLimit = 4;
+        
+        UIColor.white.setFill()
+        checkmarkShapePath.fill()
+    }
+    
+    class func drawCross() {
+        // Cross Shape Drawing
+        let crossShapePath = UIBezierPath()
+        crossShapePath.move(to: CGPoint(x: 10, y: 70))
+        crossShapePath.addLine(to: CGPoint(x: 70, y: 10))
+        crossShapePath.move(to: CGPoint(x: 10, y: 10))
+        crossShapePath.addLine(to: CGPoint(x: 70, y: 70))
+        crossShapePath.lineCapStyle = CGLineCap.round;
+        crossShapePath.lineJoinStyle = CGLineJoin.round;
+        UIColor.white.setStroke()
+        crossShapePath.lineWidth = 14
+        crossShapePath.stroke()
+    }
+    
+    class func drawNotice() {
+        // Notice Shape Drawing
+        let noticeShapePath = UIBezierPath()
+        noticeShapePath.move(to: CGPoint(x: 72, y: 48.54))
+        noticeShapePath.addLine(to: CGPoint(x: 72, y: 39.9))
+        noticeShapePath.addCurve(to: CGPoint(x: 66.38, y: 34.01), controlPoint1: CGPoint(x: 72, y: 36.76), controlPoint2: CGPoint(x: 69.48, y: 34.01))
+        noticeShapePath.addCurve(to: CGPoint(x: 61.53, y: 35.97), controlPoint1: CGPoint(x: 64.82, y: 34.01), controlPoint2: CGPoint(x: 62.69, y: 34.8))
