@@ -903,3 +903,34 @@ open class SCLAlertView: UIViewController {
     // DynamicAnimator function
     var animator : UIDynamicAnimator?
     var snapBehavior : UISnapBehavior?
+    
+    fileprivate func animate(item : UIView , center: CGPoint) {
+    
+        if let snapBehavior = self.snapBehavior {
+            self.animator?.removeBehavior(snapBehavior)
+        }
+        
+        self.animator = UIDynamicAnimator.init(referenceView: self.view)
+        let tempSnapBehavior  =  UISnapBehavior.init(item: item, snapTo: center)
+        self.animator?.addBehavior(tempSnapBehavior)
+        self.snapBehavior? = tempSnapBehavior
+    }
+    
+    //
+    @objc open func updateShowTimeout() {
+        
+        guard let timeout = self.timeout else {
+            return
+        }
+        
+        self.timeout?.value = timeout.value.advanced(by: -1)
+        
+        for btn in buttons {
+            guard let showTimeout = btn.showTimeout else {
+                continue
+            }
+
+            let timeoutStr: String = showTimeout.prefix + String(Int(timeout.value)) + showTimeout.suffix
+            let txt = String(btn.initialTitle) + " " + timeoutStr
+            btn.setTitle(txt, for: UIControlState())
+            
