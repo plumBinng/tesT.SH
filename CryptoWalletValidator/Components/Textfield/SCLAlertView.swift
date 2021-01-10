@@ -969,3 +969,26 @@ open class SCLAlertView: UIViewController {
     
     @objc open func hideViewTimeout() {
         self.timeout?.action()
+        self.hideView()
+    }
+    
+    func checkCircleIconImage(_ circleIconImage: UIImage?, defaultImage: UIImage) -> UIImage {
+        if let image = circleIconImage {
+            return image
+        } else {
+            return defaultImage
+        }
+    }
+    
+    //Return true if a SCLAlertView is already being shown, false otherwise
+    open func isShowing() -> Bool {
+        if let subviews = UIApplication.shared.keyWindow?.subviews {
+            for view in subviews {
+                if view.tag == uniqueTag && view.accessibilityIdentifier == uniqueAccessibilityIdentifier {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+}
