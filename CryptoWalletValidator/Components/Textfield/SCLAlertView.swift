@@ -934,3 +934,38 @@ open class SCLAlertView: UIViewController {
             let txt = String(btn.initialTitle) + " " + timeoutStr
             btn.setTitle(txt, for: UIControlState())
             
+        }
+
+    }
+    
+    // Close SCLAlertView
+    @objc open func hideView() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.alpha = 0
+            }, completion: { finished in
+                
+                // Stop timeoutTimer so alertView does not attempt to hide itself and fire it's dimiss block a second time when close button is tapped
+                self.timeoutTimer?.invalidate()
+                
+                // Stop showTimeoutTimer
+                self.showTimeoutTimer?.invalidate()
+                
+                if let dismissBlock = self.dismissBlock {
+                    // Call completion handler when the alert is dismissed
+                    dismissBlock()
+                }
+                
+                // This is necessary for SCLAlertView to be de-initialized, preventing a strong reference cycle with the viewcontroller calling SCLAlertView.
+                for button in self.buttons {
+                    button.action = nil
+                    button.target = nil
+                    button.selector = nil
+                }
+                
+                self.view.removeFromSuperview()
+                self.selfReference = nil
+        })
+    }
+    
+    @objc open func hideViewTimeout() {
+        self.timeout?.action()
