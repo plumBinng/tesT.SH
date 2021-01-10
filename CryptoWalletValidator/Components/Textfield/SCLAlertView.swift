@@ -1016,3 +1016,23 @@ class SCLAlertViewStyleKit : NSObject {
         static var checkmarkTargets: [AnyObject]?
         static var imageOfCross: UIImage?
         static var crossTargets: [AnyObject]?
+        static var imageOfNotice: UIImage?
+        static var noticeTargets: [AnyObject]?
+        static var imageOfWarning: UIImage?
+        static var warningTargets: [AnyObject]?
+        static var imageOfInfo: UIImage?
+        static var infoTargets: [AnyObject]?
+        static var imageOfEdit: UIImage?
+        static var editTargets: [AnyObject]?
+        static var imageOfQuestion: UIImage?
+        static var questionTargets: [AnyObject]?
+    }
+    
+    // Initialization
+    /// swift 1.2 abolish func load
+    //    override class func load() {
+    //    }
+    
+    // Drawing Methods
+    class func drawCheckmark() {
+        // Checkmark Shape Drawing
