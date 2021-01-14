@@ -1205,3 +1205,24 @@ class SCLAlertViewStyleKit : NSObject {
         editPathPath.addLine(to: CGPoint(x: 17.7, y: 56.7))
         editPathPath.close()
         editPathPath.move(to: CGPoint(x: 25.8, y: 63.8))
+        editPathPath.addLine(to: CGPoint(x: 60.1, y: 24.2))
+        editPathPath.addLine(to: CGPoint(x: 62.3, y: 26.1))
+        editPathPath.addLine(to: CGPoint(x: 28.1, y: 65.7))
+        editPathPath.addLine(to: CGPoint(x: 25.8, y: 63.8))
+        editPathPath.addLine(to: CGPoint(x: 25.8, y: 63.8))
+        editPathPath.close()
+        editPathPath.move(to: CGPoint(x: 25.9, y: 68.1))
+        editPathPath.addLine(to: CGPoint(x: 4.2, y: 79.5))
+        editPathPath.addLine(to: CGPoint(x: 11.3, y: 55.5))
+        editPathPath.addLine(to: CGPoint(x: 25.9, y: 68.1))
+        editPathPath.close()
+        editPathPath.miterLimit = 4;
+        editPathPath.usesEvenOddFillRule = true;
+        color.setFill()
+        editPathPath.fill()
+    }
+    
+    class func drawQuestion() {
+        // Color Declarations
+        let color = UIColor(red: CGFloat(1.0), green: CGFloat(1.0), blue: CGFloat(1.0), alpha: CGFloat(1.0))
+        // Questionmark Shape Drawing
