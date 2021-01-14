@@ -1140,3 +1140,40 @@ class SCLAlertViewStyleKit : NSObject {
         warningShapePath.addCurve(to: CGPoint(x: 40.38, y: 58.16), controlPoint1: CGPoint(x: 34.9, y: 56.2), controlPoint2: CGPoint(x: 36.41, y: 58.16))
         warningShapePath.addCurve(to: CGPoint(x: 45.67, y: 54.44), controlPoint1: CGPoint(x: 44.34, y: 58.16), controlPoint2: CGPoint(x: 45.67, y: 56.01))
         warningShapePath.addLine(to: CGPoint(x: 48.5, y: 19.36))
+        warningShapePath.addLine(to: CGPoint(x: 48.5, y: 8.77))
+        warningShapePath.addCurve(to: CGPoint(x: 46.23, y: 4.26), controlPoint1: CGPoint(x: 48.5, y: 7.01), controlPoint2: CGPoint(x: 47.74, y: 5.44))
+        warningShapePath.close()
+        warningShapePath.miterLimit = 4;
+        
+        greyColor.setFill()
+        warningShapePath.fill()
+    }
+    
+    class func drawInfo() {
+        // Color Declarations
+        let color0 = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
+        
+        // Info Shape Drawing
+        let infoShapePath = UIBezierPath()
+        infoShapePath.move(to: CGPoint(x: 45.66, y: 15.96))
+        infoShapePath.addCurve(to: CGPoint(x: 45.66, y: 5.22), controlPoint1: CGPoint(x: 48.78, y: 12.99), controlPoint2: CGPoint(x: 48.78, y: 8.19))
+        infoShapePath.addCurve(to: CGPoint(x: 34.34, y: 5.22), controlPoint1: CGPoint(x: 42.53, y: 2.26), controlPoint2: CGPoint(x: 37.47, y: 2.26))
+        infoShapePath.addCurve(to: CGPoint(x: 34.34, y: 15.96), controlPoint1: CGPoint(x: 31.22, y: 8.19), controlPoint2: CGPoint(x: 31.22, y: 12.99))
+        infoShapePath.addCurve(to: CGPoint(x: 45.66, y: 15.96), controlPoint1: CGPoint(x: 37.47, y: 18.92), controlPoint2: CGPoint(x: 42.53, y: 18.92))
+        infoShapePath.close()
+        infoShapePath.move(to: CGPoint(x: 48, y: 69.41))
+        infoShapePath.addCurve(to: CGPoint(x: 40, y: 77), controlPoint1: CGPoint(x: 48, y: 73.58), controlPoint2: CGPoint(x: 44.4, y: 77))
+        infoShapePath.addLine(to: CGPoint(x: 40, y: 77))
+        infoShapePath.addCurve(to: CGPoint(x: 32, y: 69.41), controlPoint1: CGPoint(x: 35.6, y: 77), controlPoint2: CGPoint(x: 32, y: 73.58))
+        infoShapePath.addLine(to: CGPoint(x: 32, y: 35.26))
+        infoShapePath.addCurve(to: CGPoint(x: 40, y: 27.67), controlPoint1: CGPoint(x: 32, y: 31.08), controlPoint2: CGPoint(x: 35.6, y: 27.67))
+        infoShapePath.addLine(to: CGPoint(x: 40, y: 27.67))
+        infoShapePath.addCurve(to: CGPoint(x: 48, y: 35.26), controlPoint1: CGPoint(x: 44.4, y: 27.67), controlPoint2: CGPoint(x: 48, y: 31.08))
+        infoShapePath.addLine(to: CGPoint(x: 48, y: 69.41))
+        infoShapePath.close()
+        color0.setFill()
+        infoShapePath.fill()
+    }
+    
+    class func drawEdit() {
+        // Color Declarations
