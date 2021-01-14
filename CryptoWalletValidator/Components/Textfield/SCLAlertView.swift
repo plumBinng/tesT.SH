@@ -1177,3 +1177,31 @@ class SCLAlertViewStyleKit : NSObject {
     
     class func drawEdit() {
         // Color Declarations
+        let color = UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
+        
+        // Edit shape Drawing
+        let editPathPath = UIBezierPath()
+        editPathPath.move(to: CGPoint(x: 71, y: 2.7))
+        editPathPath.addCurve(to: CGPoint(x: 71.9, y: 15.2), controlPoint1: CGPoint(x: 74.7, y: 5.9), controlPoint2: CGPoint(x: 75.1, y: 11.6))
+        editPathPath.addLine(to: CGPoint(x: 64.5, y: 23.7))
+        editPathPath.addLine(to: CGPoint(x: 49.9, y: 11.1))
+        editPathPath.addLine(to: CGPoint(x: 57.3, y: 2.6))
+        editPathPath.addCurve(to: CGPoint(x: 69.7, y: 1.7), controlPoint1: CGPoint(x: 60.4, y: -1.1), controlPoint2: CGPoint(x: 66.1, y: -1.5))
+        editPathPath.addLine(to: CGPoint(x: 71, y: 2.7))
+        editPathPath.addLine(to: CGPoint(x: 71, y: 2.7))
+        editPathPath.close()
+        editPathPath.move(to: CGPoint(x: 47.8, y: 13.5))
+        editPathPath.addLine(to: CGPoint(x: 13.4, y: 53.1))
+        editPathPath.addLine(to: CGPoint(x: 15.7, y: 55.1))
+        editPathPath.addLine(to: CGPoint(x: 50.1, y: 15.5))
+        editPathPath.addLine(to: CGPoint(x: 47.8, y: 13.5))
+        editPathPath.addLine(to: CGPoint(x: 47.8, y: 13.5))
+        editPathPath.close()
+        editPathPath.move(to: CGPoint(x: 17.7, y: 56.7))
+        editPathPath.addLine(to: CGPoint(x: 23.8, y: 62.2))
+        editPathPath.addLine(to: CGPoint(x: 58.2, y: 22.6))
+        editPathPath.addLine(to: CGPoint(x: 52, y: 17.1))
+        editPathPath.addLine(to: CGPoint(x: 17.7, y: 56.7))
+        editPathPath.addLine(to: CGPoint(x: 17.7, y: 56.7))
+        editPathPath.close()
+        editPathPath.move(to: CGPoint(x: 25.8, y: 63.8))
