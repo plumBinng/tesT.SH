@@ -1249,3 +1249,22 @@ class SCLAlertViewStyleKit : NSObject {
         questionShapePath.close()
         color.setFill()
         questionShapePath.fill()
+    }
+    
+    // Generated Images
+    class var imageOfCheckmark: UIImage {
+        if (Cache.imageOfCheckmark != nil) {
+            return Cache.imageOfCheckmark!
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
+        SCLAlertViewStyleKit.drawCheckmark()
+        Cache.imageOfCheckmark = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return Cache.imageOfCheckmark!
+    }
+    
+    class var imageOfCross: UIImage {
+        if (Cache.imageOfCross != nil) {
+            return Cache.imageOfCross!
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
