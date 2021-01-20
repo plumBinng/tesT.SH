@@ -1268,3 +1268,25 @@ class SCLAlertViewStyleKit : NSObject {
             return Cache.imageOfCross!
         }
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
+        SCLAlertViewStyleKit.drawCross()
+        Cache.imageOfCross = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return Cache.imageOfCross!
+    }
+    
+    class var imageOfNotice: UIImage {
+        if (Cache.imageOfNotice != nil) {
+            return Cache.imageOfNotice!
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
+        SCLAlertViewStyleKit.drawNotice()
+        Cache.imageOfNotice = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return Cache.imageOfNotice!
+    }
+    
+    class var imageOfWarning: UIImage {
+        if (Cache.imageOfWarning != nil) {
+            return Cache.imageOfWarning!
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
