@@ -1290,3 +1290,33 @@ class SCLAlertViewStyleKit : NSObject {
             return Cache.imageOfWarning!
         }
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
+        SCLAlertViewStyleKit.drawWarning()
+        Cache.imageOfWarning = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return Cache.imageOfWarning!
+    }
+    
+    class var imageOfInfo: UIImage {
+        if (Cache.imageOfInfo != nil) {
+            return Cache.imageOfInfo!
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
+        SCLAlertViewStyleKit.drawInfo()
+        Cache.imageOfInfo = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return Cache.imageOfInfo!
+    }
+    
+    class var imageOfEdit: UIImage {
+        if (Cache.imageOfEdit != nil) {
+            return Cache.imageOfEdit!
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
+        SCLAlertViewStyleKit.drawEdit()
+        Cache.imageOfEdit = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return Cache.imageOfEdit!
+    }
+    
+    class var imageOfQuestion: UIImage {
+        if (Cache.imageOfQuestion != nil) {
