@@ -3,4 +3,4 @@
 //  SCLAlertView
 //
 //  Created by Christian Cabarrocas on 16/04/16.
-//  Copyrig
+//  Copyright © 2016 Alexey Poi
