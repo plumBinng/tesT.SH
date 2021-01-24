@@ -1,3 +1,5 @@
 //
 //  SCLExtensions.swift
-//  SCLAlertV
+//  SCLAlertView
+//
+//  Created by 
