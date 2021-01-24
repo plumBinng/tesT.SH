@@ -1320,3 +1320,12 @@ class SCLAlertViewStyleKit : NSObject {
     
     class var imageOfQuestion: UIImage {
         if (Cache.imageOfQuestion != nil) {
+            return Cache.imageOfQuestion!
+        }
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
+        SCLAlertViewStyleKit.drawQuestion()
+        Cache.imageOfQuestion = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return Cache.imageOfQuestion!
+    }
+}
