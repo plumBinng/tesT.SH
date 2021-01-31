@@ -12,4 +12,4 @@ extension Int {
     
     func toUIColor() -> UIColor {
         return UIColor(
-            red:
+            red: CGFloat((self & 0xFF0000) 
