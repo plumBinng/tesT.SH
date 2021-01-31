@@ -8,4 +8,6 @@
 
 import UIKit
 
-extension 
+extension Int {
+    
+    func toUICo
