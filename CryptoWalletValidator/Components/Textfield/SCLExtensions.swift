@@ -10,4 +10,5 @@ import UIKit
 
 extension Int {
     
-    func toUICo
+    func toUIColor() -> UIColor {
+        
