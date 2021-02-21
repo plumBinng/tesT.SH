@@ -13,4 +13,5 @@ extension Int {
     func toUIColor() -> UIColor {
         return UIColor(
             red: CGFloat((self & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((self &
+            green: CGFloat((self & 0x00FF00) >> 8) / 255.0,
+     
