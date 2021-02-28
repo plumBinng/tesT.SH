@@ -19,4 +19,4 @@ extension Int {
         )
     }
     
-    fun
+    func toCGColor() -> CGColor 
