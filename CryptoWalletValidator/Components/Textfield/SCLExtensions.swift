@@ -28,4 +28,4 @@ extension UInt {
     
     func toUIColor() -> UIColor {
         return UIColor(
-         
+            red: CGFloat((self & 0xFF000
