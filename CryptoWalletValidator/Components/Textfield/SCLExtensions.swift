@@ -20,4 +20,8 @@ extension Int {
     }
     
     func toCGColor() -> CGColor {
-        return self.toUIColor().
+        return self.toUIColor().cgColor
+    }
+}
+
+extension
