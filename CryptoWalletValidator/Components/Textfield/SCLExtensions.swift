@@ -31,4 +31,5 @@ extension UInt {
             red: CGFloat((self & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((self & 0x00FF00) >> 8) / 255.0,
             blue: CGFloat(self & 0x0000FF) / 255.0,
-            alph
+            alpha: CGFloat(1.0)
+  
