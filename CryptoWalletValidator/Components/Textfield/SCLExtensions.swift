@@ -35,4 +35,5 @@ extension UInt {
         )
     }
     
-    func toCG
+    func toCGColor() -> CGColor {
+        
