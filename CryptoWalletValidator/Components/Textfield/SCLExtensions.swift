@@ -40,4 +40,6 @@ extension UInt {
     }
 }
 
-extension
+extension String {
+    
+    func heig
