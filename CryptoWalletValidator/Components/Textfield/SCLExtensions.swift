@@ -36,4 +36,4 @@ extension UInt {
     }
     
     func toCGColor() -> CGColor {
-        
+        return self.toUIColor().cgColor
