@@ -42,4 +42,4 @@ extension UInt {
 
 extension String {
     
-    func heig
+    func heightWithConstrainedWidth(wid
