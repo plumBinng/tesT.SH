@@ -42,4 +42,4 @@ extension UInt {
 
 extension String {
     
-    func heightWithConstrainedWidth(wid
+    func heightWithConstrainedWidth(width: CGFloat, font: UIFont) 
