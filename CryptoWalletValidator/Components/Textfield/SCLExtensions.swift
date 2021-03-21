@@ -43,4 +43,4 @@ extension UInt {
 extension String {
     
     func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat {
-        let con
+        let constraintRect = CGSize(width: width
