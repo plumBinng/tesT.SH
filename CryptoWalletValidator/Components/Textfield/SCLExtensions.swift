@@ -47,4 +47,6 @@ extension String {
         
         let boundingBox = self.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         
-        return
+        return boundingBox.height
+    }
+  
