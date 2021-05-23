@@ -26,4 +26,5 @@
 		<string>Roboto-Bold.ttf</string>
 		<string>Roboto-Light.ttf</string>
 	</array>
-	<key>UILaunchStoryboa
+	<key>UILaunchStoryboardName</key>
+	<string>Launc
