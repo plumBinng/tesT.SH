@@ -28,4 +28,6 @@
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</k
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	
