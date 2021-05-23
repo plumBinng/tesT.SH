@@ -27,4 +27,5 @@
 		<string>Roboto-Light.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>Launc
+	<string>LaunchScreen</string>
+	<key>UIMainS
