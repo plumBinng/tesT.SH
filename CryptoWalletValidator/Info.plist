@@ -30,4 +30,6 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiredDev
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		
