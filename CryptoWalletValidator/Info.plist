@@ -33,4 +33,5 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
-	</arra
+	</array>
+	<key>UISupportedInte
