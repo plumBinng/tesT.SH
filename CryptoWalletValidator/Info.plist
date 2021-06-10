@@ -41,4 +41,5 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
-	<arra
+	<array>
+		<string>UIInterface
