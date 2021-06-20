@@ -44,4 +44,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLef
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrienta
