@@ -9,4 +9,4 @@ import Foundation
 import CommonCrypto
 
 extension Data {
-   
+    public var sha256: Dat
