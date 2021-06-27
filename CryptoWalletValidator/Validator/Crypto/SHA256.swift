@@ -6,4 +6,7 @@
 //
 
 import Foundation
-import Comm
+import CommonCrypto
+
+extension Data {
+   
