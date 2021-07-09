@@ -15,4 +15,4 @@ extension Data {
     }
 }
 
-extension
+extension Array where Element == U
