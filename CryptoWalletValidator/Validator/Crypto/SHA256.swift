@@ -15,4 +15,5 @@ extension Data {
     }
 }
 
-extension Array where Element == U
+extension Array where Element == UInt8 {
+    public var sha256
