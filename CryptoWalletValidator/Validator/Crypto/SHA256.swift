@@ -9,4 +9,5 @@ import Foundation
 import CommonCrypto
 
 extension Data {
-    public var sha256: Dat
+    public var sha256: Data {
+        let bytes =
