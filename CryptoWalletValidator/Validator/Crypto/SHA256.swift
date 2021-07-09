@@ -10,4 +10,5 @@ import CommonCrypto
 
 extension Data {
     public var sha256: Data {
-        let bytes =
+        let bytes = [UInt8](self)
+        return Da
