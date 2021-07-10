@@ -21,4 +21,4 @@ extension Array where Element == UInt8 {
         
         let mutablePointer = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(CC_SHA256_DIGEST_LENGTH))
         
-        CC_SHA256(bytes, 
+        CC_SHA256(bytes, CC_LONG(bytes.count), muta
