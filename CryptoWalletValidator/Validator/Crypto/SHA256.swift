@@ -17,4 +17,5 @@ extension Data {
 
 extension Array where Element == UInt8 {
     public var sha256: [UInt8] {
-       
+        let bytes = self
+        
