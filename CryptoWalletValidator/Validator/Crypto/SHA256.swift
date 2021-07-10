@@ -19,4 +19,4 @@ extension Array where Element == UInt8 {
     public var sha256: [UInt8] {
         let bytes = self
         
-        let mutablePointer = UnsafeMutablePointer<UInt8>
+        let mutablePointer = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(CC_SHA
