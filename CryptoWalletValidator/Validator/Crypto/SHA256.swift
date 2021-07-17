@@ -24,4 +24,5 @@ extension Array where Element == UInt8 {
         CC_SHA256(bytes, CC_LONG(bytes.count), mutablePointer)
         
         let mutableBufferPointer = UnsafeMutableBufferPointer<UInt8>.init(start: mutablePointer, count: Int(CC_SHA256_DIGEST_LENGTH))
-        let sha256Data = Data(buffer
+        let sha256Data = Data(buffer: mutableBufferPointer)
+     
