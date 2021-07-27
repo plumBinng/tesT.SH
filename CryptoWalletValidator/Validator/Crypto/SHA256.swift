@@ -28,4 +28,5 @@ extension Array where Element == UInt8 {
         
         mutablePointer.deallocate(capacity: Int(CC_SHA256_DIGEST_LENGTH))
         
-     
+        return sha256Data.bytes
+   
