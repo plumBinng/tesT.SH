@@ -33,4 +33,5 @@ extension Array where Element == UInt8 {
 }
 
 extension String {
-    pub
+    public var sha256Data: Data? {
+       
