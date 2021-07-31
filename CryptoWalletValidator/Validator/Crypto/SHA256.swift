@@ -38,4 +38,4 @@ extension String {
     }
 
     public var sha256String: String{
-        if let stringData 
+        if let stringData = self.data(using: Stri
