@@ -37,4 +37,4 @@ extension String {
         return self.data(using: String.Encoding.utf8)?.sha256
     }
 
-   
+    public var sha256String: 
