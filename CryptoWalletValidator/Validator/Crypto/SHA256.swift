@@ -39,4 +39,4 @@ extension String {
 
     public var sha256String: String{
         if let stringData = self.data(using: String.Encoding.utf8) {
-    
+            return hexStri
