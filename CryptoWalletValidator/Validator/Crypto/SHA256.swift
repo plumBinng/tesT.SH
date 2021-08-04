@@ -38,4 +38,5 @@ extension String {
     }
 
     public var sha256String: String{
-        if let stringData = self.data(using: Stri
+        if let stringData = self.data(using: String.Encoding.utf8) {
+    
