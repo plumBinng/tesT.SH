@@ -44,4 +44,5 @@ extension String {
         return ""
     }
 
-    private func digest(input : NSData) 
+    private func digest(input : NSData) -> NSData {
+        let digestLen
