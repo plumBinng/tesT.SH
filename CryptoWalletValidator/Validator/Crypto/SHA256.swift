@@ -45,4 +45,5 @@ extension String {
     }
 
     private func digest(input : NSData) -> NSData {
-        let digestLength = Int(CC_SHA256_DIGEST_LENGT
+        let digestLength = Int(CC_SHA256_DIGEST_LENGTH)
+        var hash = 
