@@ -44,4 +44,4 @@ extension String {
         return ""
     }
 
-    privat
+    private func digest(input : NSData) 
