@@ -45,4 +45,4 @@ extension String {
     }
 
     private func digest(input : NSData) -> NSData {
-        let digestLen
+        let digestLength = Int(CC_SHA256_DIGEST_LENGT
