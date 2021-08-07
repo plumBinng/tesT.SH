@@ -41,4 +41,7 @@ extension String {
         if let stringData = self.data(using: String.Encoding.utf8) {
             return hexStringFromData(input: digest(input: stringData as NSData))
         }
-        retu
+        return ""
+    }
+
+    privat
