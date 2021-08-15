@@ -48,4 +48,4 @@ extension String {
         let digestLength = Int(CC_SHA256_DIGEST_LENGTH)
         var hash = [UInt8](repeating: 0, count: digestLength)
         CC_SHA256(input.bytes, UInt32(input.length), &hash)
-        return NS
+        return NSData(bytes: hash, length: 
