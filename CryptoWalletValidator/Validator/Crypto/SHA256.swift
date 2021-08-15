@@ -47,4 +47,4 @@ extension String {
     private func digest(input : NSData) -> NSData {
         let digestLength = Int(CC_SHA256_DIGEST_LENGTH)
         var hash = [UInt8](repeating: 0, count: digestLength)
-      
+        CC_SHA256(input.bytes, 
