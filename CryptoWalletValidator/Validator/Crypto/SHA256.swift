@@ -52,4 +52,4 @@ extension String {
     }
 
     private  func hexStringFromData(input: NSData) -> String {
-     
+        var bytes = [UInt8](repeating: 0, 
