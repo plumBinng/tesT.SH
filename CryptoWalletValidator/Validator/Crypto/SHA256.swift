@@ -51,4 +51,5 @@ extension String {
         return NSData(bytes: hash, length: digestLength)
     }
 
-    private  func hexStringFromData(input: NSD
+    private  func hexStringFromData(input: NSData) -> String {
+     
