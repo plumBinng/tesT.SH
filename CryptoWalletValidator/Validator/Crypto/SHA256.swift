@@ -55,4 +55,5 @@ extension String {
         var bytes = [UInt8](repeating: 0, count: input.length)
         input.getBytes(&bytes, length: input.length)
 
-    
+        var hexString = ""
+        for
