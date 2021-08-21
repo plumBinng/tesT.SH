@@ -60,4 +60,7 @@ extension String {
             hexString += String(format:"%02x", UInt8(byte))
         }
 
-        return hexStr
+        return hexString
+    }
+
+}
