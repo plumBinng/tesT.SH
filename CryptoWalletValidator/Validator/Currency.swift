@@ -1,2 +1,4 @@
 //
-//  Currency.swi
+//  Currency.swift
+//  CrytoWalletValidator
+//
