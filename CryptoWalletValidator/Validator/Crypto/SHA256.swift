@@ -56,4 +56,5 @@ extension String {
         input.getBytes(&bytes, length: input.length)
 
         var hexString = ""
-        for
+        for byte in bytes {
+            hexStri
