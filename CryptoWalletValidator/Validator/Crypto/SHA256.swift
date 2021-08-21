@@ -57,4 +57,4 @@ extension String {
 
         var hexString = ""
         for byte in bytes {
-            hexStri
+            hexString += String(format:"%02x", U
