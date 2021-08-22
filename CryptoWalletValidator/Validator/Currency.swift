@@ -5,4 +5,7 @@
 //  Created by Suryani Chang on 14/12/2017.
 //
 
-impo
+import Foundation
+
+struct Currency {
+    le
