@@ -10,3 +10,7 @@ import Foundation
 struct Currency {
     let name:String
     let symbol:String
+}
+
+extension Currency {
+   
