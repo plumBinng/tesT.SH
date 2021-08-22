@@ -8,4 +8,5 @@
 import Foundation
 
 struct Currency {
-    le
+    let name:String
+    let symbol:String
