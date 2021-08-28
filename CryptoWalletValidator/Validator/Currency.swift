@@ -15,4 +15,5 @@ struct Currency {
 extension Currency {
     var addressTypes:[String: [String]] {
         
-        if symbol == "btc" || name == "b
+        if symbol == "btc" || name == "bitcoin" {
+            return ["
