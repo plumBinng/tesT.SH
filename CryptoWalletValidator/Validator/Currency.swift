@@ -15,4 +15,4 @@ struct Currency {
 extension Currency {
     var addressTypes:[String: [String]] {
         
-        if sym
+        if symbol == "btc" || name == "b
