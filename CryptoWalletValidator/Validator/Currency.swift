@@ -16,4 +16,5 @@ extension Currency {
     var addressTypes:[String: [String]] {
         
         if symbol == "btc" || name == "bitcoin" {
-            return ["prod": ["00", "05"], "test
+            return ["prod": ["00", "05"], "testnet": ["6f", "c4"]]
+        } else if s
