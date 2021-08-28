@@ -13,4 +13,4 @@ struct Currency {
 }
 
 extension Currency {
-   
+    var addressTypes:[String
