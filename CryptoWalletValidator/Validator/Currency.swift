@@ -13,4 +13,6 @@ struct Currency {
 }
 
 extension Currency {
-    var addressTypes:[String
+    var addressTypes:[String: [String]] {
+        
+        if sym
