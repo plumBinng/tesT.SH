@@ -18,4 +18,4 @@ extension Currency {
         if symbol == "btc" || name == "bitcoin" {
             return ["prod": ["00", "05"], "testnet": ["6f", "c4"]]
         } else if symbol == "ltc" || name == "litecoin" {
-            return
+            return ["prod": ["30", "05"], 
