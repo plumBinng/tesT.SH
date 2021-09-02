@@ -19,4 +19,6 @@ extension Currency {
             return ["prod": ["00", "05"], "testnet": ["6f", "c4"]]
         } else if symbol == "ltc" || name == "litecoin" {
             return ["prod": ["30", "05"], "testnet": ["6f", "c4"]]
-   
+        }
+        
+        retur
