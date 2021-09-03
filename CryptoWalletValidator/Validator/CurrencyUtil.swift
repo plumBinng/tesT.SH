@@ -7,4 +7,5 @@
 
 import Foundation
 
-public struct Cur
+public struct CurrencyUtil {
+    static var supp
