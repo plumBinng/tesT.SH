@@ -1,3 +1,5 @@
 //
 //  CurrencyUtil.swift
-//  CrytoWa
+//  CrytoWalletValidator
+//
+/
