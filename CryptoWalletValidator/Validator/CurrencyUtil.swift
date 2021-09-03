@@ -2,4 +2,7 @@
 //  CurrencyUtil.swift
 //  CrytoWalletValidator
 //
-//  Created by Suryani Cha
+//  Created by Suryani Chang on 14/12/2017.
+//
+
+import Fou
