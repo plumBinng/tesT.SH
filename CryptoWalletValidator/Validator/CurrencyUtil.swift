@@ -8,4 +8,4 @@
 import Foundation
 
 public struct CurrencyUtil {
-    static var supportedCurrencies: [Strin
+    static var supportedCurrencies: [String:String] = ["bitcoin":"btc","lit
