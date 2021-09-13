@@ -8,4 +8,4 @@
 import Foundation
 
 public struct CurrencyUtil {
-    static var supp
+    static var supportedCurrencies: [Strin
