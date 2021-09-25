@@ -12,4 +12,4 @@ public struct CurrencyUtil {
     private var currencies:[Currency] = []
     
     init() {
-        for currencySymbol in Cu
+        for currencySymbol in CurrencyUtil.supportedCurren
