@@ -13,4 +13,4 @@ public struct CurrencyUtil {
     
     init() {
         for currencySymbol in CurrencyUtil.supportedCurrencies {
-         
+            let currency:Currency = Currency(name
