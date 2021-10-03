@@ -18,4 +18,4 @@ public struct CurrencyUtil {
         }
     }
 
-    f
+    func retrieveCurrencyBySymbol
