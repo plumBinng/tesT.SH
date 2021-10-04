@@ -19,4 +19,6 @@ public struct CurrencyUtil {
     }
 
     func retrieveCurrencyBySymbol(_ symbolOrName: String) -> Currency? {
-        return currencies.filter{ $0.name == symbolOrName || $0.symbol == sy
+        return currencies.filter{ $0.name == symbolOrName || $0.symbol == symbolOrName }.first
+    }
+}
