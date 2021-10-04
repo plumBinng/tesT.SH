@@ -18,4 +18,5 @@ public struct CurrencyUtil {
         }
     }
 
-    func retrieveCurrencyBySymbol(_ symbolOrName: String) -> Currency? 
+    func retrieveCurrencyBySymbol(_ symbolOrName: String) -> Currency? {
+        return cur
