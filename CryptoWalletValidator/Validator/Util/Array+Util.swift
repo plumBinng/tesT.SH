@@ -52,3 +52,8 @@ extension Array where Element == UInt8 {
 func arrayUtil_convertArray<S, T>(_ source: [S], to: T.Type) -> [T] {
     let count = source.count * MemoryLayout<S>.stride/MemoryLayout<T>.stride
     return source.withUnsafeBufferPointer {
+        $0.baseAddress!.withMemoryRebound(to: T.self, capacity: count) {
+            Array(UnsafeBufferPointer(start: $0, count: count))
+        }
+    }
+}
