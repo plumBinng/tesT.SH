@@ -1,4 +1,4 @@
 //
 //  Base58.swift
 //
-//  Crea
+//  Created by Luís Silva on 11
