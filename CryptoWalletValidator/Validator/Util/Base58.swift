@@ -1,4 +1,5 @@
 //
 //  Base58.swift
 //
-//  Created by Luís Silva on 11
+//  Created by Luís Silva on 11/09/17.
+//  Copyright © 
