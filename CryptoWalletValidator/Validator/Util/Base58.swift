@@ -7,4 +7,5 @@
 
 import Foundation
 
-s
+struct Base58 {
+    static le
