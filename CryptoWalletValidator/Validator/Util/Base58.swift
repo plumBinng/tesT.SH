@@ -8,4 +8,4 @@
 import Foundation
 
 struct Base58 {
-    static le
+    static let base58Alphabet = "123456789
