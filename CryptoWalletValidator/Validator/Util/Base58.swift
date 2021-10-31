@@ -10,4 +10,5 @@ import Foundation
 struct Base58 {
     static let base58Alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
     
-    // Enco
+    // Encode
+    static func base58FromBytes
