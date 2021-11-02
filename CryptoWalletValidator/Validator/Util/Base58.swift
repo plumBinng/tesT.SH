@@ -11,4 +11,5 @@ struct Base58 {
     static let base58Alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
     
     // Encode
-    static func base58FromBytes
+    static func base58FromBytes(_ bytes: [UInt8]) -> String {
+  
