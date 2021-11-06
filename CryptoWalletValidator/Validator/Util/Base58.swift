@@ -14,4 +14,6 @@ struct Base58 {
     static func base58FromBytes(_ bytes: [UInt8]) -> String {
         var bytes = bytes
         var zerosCount = 0
-        var
+        var length = 0
+        
+        f
