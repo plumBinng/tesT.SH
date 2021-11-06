@@ -13,4 +13,5 @@ struct Base58 {
     // Encode
     static func base58FromBytes(_ bytes: [UInt8]) -> String {
         var bytes = bytes
-        var z
+        var zerosCount = 0
+        var
