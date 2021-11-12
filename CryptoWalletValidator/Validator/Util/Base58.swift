@@ -16,4 +16,5 @@ struct Base58 {
         var zerosCount = 0
         var length = 0
         
-        f
+        for b in bytes {
+          
