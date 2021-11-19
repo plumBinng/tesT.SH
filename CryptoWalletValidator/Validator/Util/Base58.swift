@@ -17,4 +17,5 @@ struct Base58 {
         var length = 0
         
         for b in bytes {
-          
+            if b != 0 { break }
+    
