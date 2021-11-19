@@ -23,4 +23,6 @@ struct Base58 {
         
         bytes.removeFirst(zerosCount)
         
-        let size = bytes.count
+        let size = bytes.count * 138 / 100 + 1
+        
+  
