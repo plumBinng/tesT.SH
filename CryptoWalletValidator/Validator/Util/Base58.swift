@@ -18,4 +18,5 @@ struct Base58 {
         
         for b in bytes {
             if b != 0 { break }
+            zerosCount += 1
     
