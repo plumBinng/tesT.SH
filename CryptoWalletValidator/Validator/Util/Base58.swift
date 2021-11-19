@@ -23,3 +23,4 @@ struct Base58 {
         
         bytes.removeFirst(zerosCount)
         
+        let size = bytes.count
