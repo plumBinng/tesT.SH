@@ -21,4 +21,5 @@ struct Base58 {
             zerosCount += 1
         }
         
-        by
+        bytes.removeFirst(zerosCount)
+        
