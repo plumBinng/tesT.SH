@@ -29,4 +29,5 @@ struct Base58 {
         for b in bytes {
             var carry = Int(b)
             var i = 0
-      
+            
+            for j in 0...
