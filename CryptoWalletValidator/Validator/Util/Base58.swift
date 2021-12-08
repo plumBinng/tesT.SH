@@ -26,4 +26,5 @@ struct Base58 {
         let size = bytes.count * 138 / 100 + 1
         
         var base58: [UInt8] = Array(repeating: 0, count: size)
-        for b in by
+        for b in bytes {
+            var carry = Int(b
