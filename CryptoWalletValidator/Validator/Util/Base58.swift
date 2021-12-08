@@ -27,4 +27,6 @@ struct Base58 {
         
         var base58: [UInt8] = Array(repeating: 0, count: size)
         for b in bytes {
-            var carry = Int(b
+            var carry = Int(b)
+            var i = 0
+      
