@@ -30,4 +30,4 @@ struct Base58 {
             var carry = Int(b)
             var i = 0
             
-            for j in 0...
+            for j in 0...base58.count-1 where carr
