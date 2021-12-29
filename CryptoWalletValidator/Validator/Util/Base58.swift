@@ -32,4 +32,5 @@ struct Base58 {
             
             for j in 0...base58.count-1 where carry != 0 || i < length {
                 carry += 256 * Int(base58[base58.count - j - 1])
-                base58[base58.count - j - 1] = UInt8(ca
+                base58[base58.count - j - 1] = UInt8(carry % 58)
+                ca
