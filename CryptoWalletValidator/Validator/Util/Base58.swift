@@ -37,4 +37,5 @@ struct Base58 {
                 i += 1
             }
 
-    
+            assert(carry == 0)
+        
