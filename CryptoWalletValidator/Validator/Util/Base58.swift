@@ -38,4 +38,5 @@ struct Base58 {
             }
 
             assert(carry == 0)
-        
+            
+            length = 
