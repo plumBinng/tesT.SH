@@ -42,4 +42,5 @@ struct Base58 {
             length = i
         }
         
- 
+        // skip leading zeros
+  
