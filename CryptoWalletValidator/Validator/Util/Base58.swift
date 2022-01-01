@@ -47,4 +47,6 @@ struct Base58 {
         var str = ""
         for b in base58 {
             if b != 0 { break }
-           
+            zerosToRemove += 1
+        }
+     
