@@ -51,4 +51,5 @@ struct Base58 {
         }
         base58.removeFirst(zerosToRemove)
         
-        
+        while 0 < zerosCount {
+      
