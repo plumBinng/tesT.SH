@@ -44,4 +44,5 @@ struct Base58 {
         
         // skip leading zeros
         var zerosToRemove = 0
-    
+        var str = ""
+        f
