@@ -49,4 +49,4 @@ struct Base58 {
             if b != 0 { break }
             zerosToRemove += 1
         }
-     
+        base58.removeFirst(zero
