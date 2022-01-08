@@ -53,4 +53,5 @@ struct Base58 {
         
         while 0 < zerosCount {
             str = "\(str)1"
-      
+            zerosCount -= 1
+        }
