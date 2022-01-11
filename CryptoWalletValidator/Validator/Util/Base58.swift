@@ -55,3 +55,5 @@ struct Base58 {
             str = "\(str)1"
             zerosCount -= 1
         }
+        
+        for b in base5
