@@ -56,4 +56,5 @@ struct Base58 {
             zerosCount -= 1
         }
         
-        for b in base5
+        for b in base58 {
+            str = "\(str)\(ba
