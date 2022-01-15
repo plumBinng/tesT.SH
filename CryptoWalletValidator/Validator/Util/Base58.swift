@@ -57,4 +57,4 @@ struct Base58 {
         }
         
         for b in base58 {
-            str = "\(str)\(ba
+            str = "\(str)\(base58Alphabet[String.
