@@ -57,4 +57,6 @@ struct Base58 {
         }
         
         for b in base58 {
-            str = "\(str)\(base58Alphabet[String.Index(encodedOffset: I
+            str = "\(str)\(base58Alphabet[String.Index(encodedOffset: Int(b))])"
+        }
+        
