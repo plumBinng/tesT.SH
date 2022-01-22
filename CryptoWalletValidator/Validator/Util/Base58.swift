@@ -60,3 +60,7 @@ struct Base58 {
             str = "\(str)\(base58Alphabet[String.Index(encodedOffset: Int(b))])"
         }
         
+        return str
+    }
+    
+    
