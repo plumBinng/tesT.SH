@@ -65,4 +65,5 @@ struct Base58 {
     
     // Decode
     static func bytesFromBase58(_ base58: String) -> [UInt8] {
-        // remove leading and trailing whit
+        // remove leading and trailing whitespaces
+        let strin
