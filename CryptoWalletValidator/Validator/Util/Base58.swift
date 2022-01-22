@@ -63,4 +63,5 @@ struct Base58 {
         return str
     }
     
-    
+    // Decode
+    static func bytesFrom
