@@ -64,4 +64,4 @@ struct Base58 {
     }
     
     // Decode
-    static func bytesFrom
+    static func bytesFromBase58(_ base5
