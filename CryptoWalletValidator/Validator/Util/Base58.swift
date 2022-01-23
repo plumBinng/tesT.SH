@@ -74,3 +74,5 @@ struct Base58 {
         var length = 0
         for c in string {
             if c != "1" { break }
+            zerosCount += 1
+   
