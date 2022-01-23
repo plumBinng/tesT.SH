@@ -72,3 +72,5 @@ struct Base58 {
         
         var zerosCount = 0
         var length = 0
+        for c in string {
+   
