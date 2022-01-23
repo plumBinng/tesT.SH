@@ -68,4 +68,4 @@ struct Base58 {
         // remove leading and trailing whitespaces
         let string = base58.trimmingCharacters(in: CharacterSet.whitespaces)
         
-        guard !str
+        guard !string.isEmpty else { return [] }
