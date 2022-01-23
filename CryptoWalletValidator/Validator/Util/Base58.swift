@@ -70,4 +70,5 @@ struct Base58 {
         
         guard !string.isEmpty else { return [] }
         
-        var zerosC
+        var zerosCount = 0
+        var length = 0
