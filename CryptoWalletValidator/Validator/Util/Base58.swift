@@ -69,3 +69,5 @@ struct Base58 {
         let string = base58.trimmingCharacters(in: CharacterSet.whitespaces)
         
         guard !string.isEmpty else { return [] }
+        
+        var zerosC
