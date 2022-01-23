@@ -67,4 +67,5 @@ struct Base58 {
     static func bytesFromBase58(_ base58: String) -> [UInt8] {
         // remove leading and trailing whitespaces
         let string = base58.trimmingCharacters(in: CharacterSet.whitespaces)
-  
+        
+        guard !str
