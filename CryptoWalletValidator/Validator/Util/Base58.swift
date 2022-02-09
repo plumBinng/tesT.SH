@@ -75,4 +75,5 @@ struct Base58 {
         for c in string {
             if c != "1" { break }
             zerosCount += 1
-   
+        }
+        
