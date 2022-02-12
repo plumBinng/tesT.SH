@@ -77,4 +77,5 @@ struct Base58 {
             zerosCount += 1
         }
         
-        let size = string.lengthOfBytes(using: String.Encoding.utf8) * 733 / 1000 
+        let size = string.lengthOfBytes(using: String.Encoding.utf8) * 733 / 1000 + 1 - zerosCount
+    
