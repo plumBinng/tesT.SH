@@ -77,4 +77,4 @@ struct Base58 {
             zerosCount += 1
         }
         
-        let size = string.lengt
+        let size = string.lengthOfBytes(using: String.Enco
