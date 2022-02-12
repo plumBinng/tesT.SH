@@ -77,3 +77,4 @@ struct Base58 {
             zerosCount += 1
         }
         
+        let size = string.lengt
