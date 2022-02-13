@@ -79,4 +79,4 @@ struct Base58 {
         
         let size = string.lengthOfBytes(using: String.Encoding.utf8) * 733 / 1000 + 1 - zerosCount
         var base58: [UInt8] = Array(repeating: 0, count: size)
-  
+        for c in string where
