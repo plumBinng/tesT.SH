@@ -81,4 +81,5 @@ struct Base58 {
         var base58: [UInt8] = Array(repeating: 0, count: size)
         for c in string where c != " " {
             // search for base58 character
-            guard let base58Index = base58Alphabet.index(of: c)
+            guard let base58Index = base58Alphabet.index(of: c) else { return [] }
+       
