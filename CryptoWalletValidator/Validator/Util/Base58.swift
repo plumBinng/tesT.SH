@@ -82,4 +82,5 @@ struct Base58 {
         for c in string where c != " " {
             // search for base58 character
             guard let base58Index = base58Alphabet.index(of: c) else { return [] }
-       
+            
+            var carry = bas
