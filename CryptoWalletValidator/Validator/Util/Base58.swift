@@ -85,4 +85,5 @@ struct Base58 {
             
             var carry = base58Index.encodedOffset
             var i = 0
-            for j in 0...base58.count where carry != 0 
+            for j in 0...base58.count where carry != 0 || i < length {
+                car
