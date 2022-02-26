@@ -85,4 +85,4 @@ struct Base58 {
             
             var carry = base58Index.encodedOffset
             var i = 0
-   
+            for j in 0...base
