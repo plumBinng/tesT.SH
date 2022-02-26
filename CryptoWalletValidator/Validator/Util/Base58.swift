@@ -83,4 +83,5 @@ struct Base58 {
             // search for base58 character
             guard let base58Index = base58Alphabet.index(of: c) else { return [] }
             
-            var carry = bas
+            var carry = base58Index.encodedOffset
+   
