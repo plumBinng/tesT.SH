@@ -84,4 +84,5 @@ struct Base58 {
             guard let base58Index = base58Alphabet.index(of: c) else { return [] }
             
             var carry = base58Index.encodedOffset
+            var i = 0
    
