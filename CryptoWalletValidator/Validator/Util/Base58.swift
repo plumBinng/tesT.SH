@@ -90,4 +90,6 @@ struct Base58 {
                 base58[base58.count - j - 1] = UInt8(carry % 256)
                 carry /= 256
                 i += 1
-       
+            }
+            
+      
