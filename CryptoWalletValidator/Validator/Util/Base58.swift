@@ -97,4 +97,6 @@ struct Base58 {
         }
         
         // skip leading zeros
-        var zerosToRemov
+        var zerosToRemove = 0
+        
+        for b
