@@ -101,4 +101,6 @@ struct Base58 {
         
         for b in base58 {
             if b != 0 { break }
-            zerosToR
+            zerosToRemove += 1
+        }
+        bas
