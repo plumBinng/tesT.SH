@@ -100,4 +100,5 @@ struct Base58 {
         var zerosToRemove = 0
         
         for b in base58 {
-            if b != 0 
+            if b != 0 { break }
+            zerosToR
