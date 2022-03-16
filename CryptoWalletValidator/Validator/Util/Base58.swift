@@ -103,4 +103,4 @@ struct Base58 {
             if b != 0 { break }
             zerosToRemove += 1
         }
-        bas
+        base58.removeFirst(zerosToR
