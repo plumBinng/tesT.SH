@@ -105,4 +105,4 @@ struct Base58 {
         }
         base58.removeFirst(zerosToRemove)
         
-        var resu
+        var result: [UInt8] = Array(repea
