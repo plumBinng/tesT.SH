@@ -106,3 +106,4 @@ struct Base58 {
         base58.removeFirst(zerosToRemove)
         
         var result: [UInt8] = Array(repeating: 0, count: zerosCount)
+        for b in bas
