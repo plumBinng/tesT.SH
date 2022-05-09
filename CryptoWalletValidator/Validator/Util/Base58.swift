@@ -107,4 +107,5 @@ struct Base58 {
         
         var result: [UInt8] = Array(repeating: 0, count: zerosCount)
         for b in base58 {
-            result.
+            result.append(b)
+      
