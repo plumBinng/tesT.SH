@@ -115,4 +115,5 @@ struct Base58 {
 
 
 
-extension Array where El
+extension Array where Element == UInt8 {
+    pu
