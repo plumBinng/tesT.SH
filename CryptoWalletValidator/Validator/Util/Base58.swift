@@ -110,4 +110,9 @@ struct Base58 {
             result.append(b)
         }
         return result
-  
+    }
+}
+
+
+
+extension Array where El
