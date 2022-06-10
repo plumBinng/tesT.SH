@@ -116,4 +116,5 @@ struct Base58 {
 
 
 extension Array where Element == UInt8 {
-    public var base58Encoded
+    public var base58EncodedString: String {
+    
