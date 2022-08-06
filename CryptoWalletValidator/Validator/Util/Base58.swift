@@ -121,4 +121,4 @@ extension Array where Element == UInt8 {
         return Base58.base58FromBytes(self)
     }
     
-    public var base
+    public var base58CheckEncodedString: String {
