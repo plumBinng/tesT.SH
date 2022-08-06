@@ -120,4 +120,5 @@ extension Array where Element == UInt8 {
         guard !self.isEmpty else { return "" }
         return Base58.base58FromBytes(self)
     }
-  
+    
+    public var base
