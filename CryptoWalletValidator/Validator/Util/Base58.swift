@@ -137,4 +137,5 @@ extension String {
     }
     
     public var base58DecodedData: Data? {
-        let bytes = Base58.bytesFromBase58(
+        let bytes = Base58.bytesFromBase58(self)
+        return Data(bytes)
