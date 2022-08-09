@@ -125,4 +125,6 @@ extension Array where Element == UInt8 {
         var bytes = self
         let checksum = [UInt8](bytes.sha256.sha256[0..<4])
         
-        bytes.append(contentsOf: c
+        bytes.append(contentsOf: checksum)
+        
+   
