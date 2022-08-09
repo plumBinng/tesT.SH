@@ -132,4 +132,5 @@ extension Array where Element == UInt8 {
 }
 
 extension String {
-    public var base58E
+    public var base58EncodedString: String {
+        return [UInt8](u
