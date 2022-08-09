@@ -136,4 +136,5 @@ extension String {
         return [UInt8](utf8).base58EncodedString
     }
     
-    public var base58DecodedData: Dat
+    public var base58DecodedData: Data? {
+        let bytes = Base
