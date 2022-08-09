@@ -122,4 +122,5 @@ extension Array where Element == UInt8 {
     }
     
     public var base58CheckEncodedString: String {
-        var bytes = s
+        var bytes = self
+        let checksum =
