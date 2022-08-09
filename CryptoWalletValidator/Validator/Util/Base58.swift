@@ -127,4 +127,4 @@ extension Array where Element == UInt8 {
         
         bytes.append(contentsOf: checksum)
         
-        return Base58.bas
+        return Base58.base58FromBytes(bytes
