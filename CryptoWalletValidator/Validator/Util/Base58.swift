@@ -142,4 +142,4 @@ extension String {
     }
     
     public var base58CheckDecodedData: Data? {
-        guard let bytes = self.bas
+        guard let bytes = self.base58CheckDecodedBytes else { 
