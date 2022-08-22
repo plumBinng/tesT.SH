@@ -147,4 +147,4 @@ extension String {
     }
     
     public var base58CheckDecodedBytes: [UInt8]? {
-        va
+        var bytes = Base58.bytesFromBase58(self
