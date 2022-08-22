@@ -146,4 +146,5 @@ extension String {
         return Data(bytes)
     }
     
-    public var base58CheckDecodedBytes:
+    public var base58CheckDecodedBytes: [UInt8]? {
+        va
