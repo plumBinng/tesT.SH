@@ -146,4 +146,4 @@ extension String {
         return Data(bytes)
     }
     
-    public var bas
+    public var base58CheckDecodedBytes:
