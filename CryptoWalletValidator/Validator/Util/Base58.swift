@@ -152,4 +152,5 @@ extension String {
         
         let checksum = [UInt8](bytes[bytes.count-4..<bytes.count])
         bytes = [UInt8](bytes[0..<bytes.count-4])
-    
+        
+        let calculatedChe
