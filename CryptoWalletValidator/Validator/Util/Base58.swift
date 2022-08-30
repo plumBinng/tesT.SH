@@ -150,4 +150,4 @@ extension String {
         var bytes = Base58.bytesFromBase58(self)
         guard 4 <= bytes.count else { return nil }
         
-        let checks
+        let checksum = [UInt8](bytes[bytes.count-4..<byte
