@@ -149,3 +149,5 @@ extension String {
     public var base58CheckDecodedBytes: [UInt8]? {
         var bytes = Base58.bytesFromBase58(self)
         guard 4 <= bytes.count else { return nil }
+        
+        let checks
