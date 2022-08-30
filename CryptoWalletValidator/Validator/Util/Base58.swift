@@ -151,4 +151,5 @@ extension String {
         guard 4 <= bytes.count else { return nil }
         
         let checksum = [UInt8](bytes[bytes.count-4..<bytes.count])
-        bytes = [U
+        bytes = [UInt8](bytes[0..<bytes.count-4])
+    
