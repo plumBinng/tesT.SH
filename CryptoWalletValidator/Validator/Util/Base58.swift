@@ -155,3 +155,5 @@ extension String {
         
         let calculatedChecksum = [UInt8](bytes.sha256.sha256[0...3])
         if checksum != calculatedChecksum { return nil }
+        
+        return 
