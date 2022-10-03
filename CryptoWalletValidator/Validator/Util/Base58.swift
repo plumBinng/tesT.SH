@@ -154,4 +154,4 @@ extension String {
         bytes = [UInt8](bytes[0..<bytes.count-4])
         
         let calculatedChecksum = [UInt8](bytes.sha256.sha256[0...3])
- 
+        if checksum != calculated
