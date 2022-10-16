@@ -11,4 +11,4 @@ extension Data {
     
     // MARK: Hex String
     
-    public
+    public var hexString: String {
