@@ -15,4 +15,4 @@ extension Data {
         return self.map { return String(format: "%x", $0) }.joined()
     }
     
-    publ
+    public var hexStringWithPrefi
