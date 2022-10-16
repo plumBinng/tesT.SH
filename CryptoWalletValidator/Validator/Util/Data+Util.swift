@@ -9,4 +9,6 @@ import Foundation
 
 extension Data {
     
-    // MA
+    // MARK: Hex String
+    
+    public
