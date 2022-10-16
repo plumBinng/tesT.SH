@@ -12,3 +12,4 @@ extension Data {
     // MARK: Hex String
     
     public var hexString: String {
+        return self.map { ret
