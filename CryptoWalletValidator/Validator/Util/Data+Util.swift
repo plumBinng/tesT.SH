@@ -12,4 +12,7 @@ extension Data {
     // MARK: Hex String
     
     public var hexString: String {
-        return self.map { return String(format: "%x", $0) }
+        return self.map { return String(format: "%x", $0) }.joined()
+    }
+    
+    publ
