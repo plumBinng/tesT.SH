@@ -16,4 +16,7 @@ extension Data {
     }
     
     public var hexStringWithPrefix: String {
-        return "0x\(
+        return "0x\(hexString)"
+    }
+    
+    publ
