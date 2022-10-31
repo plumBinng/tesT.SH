@@ -19,4 +19,5 @@ extension Data {
         return "0x\(hexString)"
     }
     
-    public var fullHexString: Strin
+    public var fullHexString: String {
+        return self.map { return 
