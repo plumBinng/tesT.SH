@@ -19,4 +19,4 @@ extension Data {
         return "0x\(hexString)"
     }
     
-    publ
+    public var fullHexString: Strin
