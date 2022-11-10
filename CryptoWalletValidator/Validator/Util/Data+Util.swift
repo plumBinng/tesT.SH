@@ -23,4 +23,5 @@ extension Data {
         return self.map { return String(format: "%02x", $0) }.joined()
     }
     
-    public var fullHexStringWit
+    public var fullHexStringWithPrefix: String {
+        return
