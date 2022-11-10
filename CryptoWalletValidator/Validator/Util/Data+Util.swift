@@ -20,4 +20,4 @@ extension Data {
     }
     
     public var fullHexString: String {
-        return self.map { return 
+        return self.map { return String(format: "%02x", $0) 
