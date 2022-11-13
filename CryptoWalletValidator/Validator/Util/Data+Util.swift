@@ -29,4 +29,5 @@ extension Data {
     
     // MARK: Data to [UInt8]
     
-    public var bytes: [UInt8]
+    public var bytes: [UInt8] {
+        return [UInt8](
