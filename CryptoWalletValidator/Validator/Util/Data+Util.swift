@@ -24,4 +24,6 @@ extension Data {
     }
     
     public var fullHexStringWithPrefix: String {
-        return
+        return "0x\(fullHexString)"
+    }
+  
