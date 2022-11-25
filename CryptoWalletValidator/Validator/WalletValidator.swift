@@ -47,3 +47,9 @@ struct WalletValidator {
             if result.count == 0 {
                 throw ValidationError.invalidAddress
             }
+        }else{
+             throw ValidationError.invalidNetwork
+        }
+        
+    }
+}
