@@ -23,3 +23,27 @@ struct WalletValidator {
     
     private static func getAddressType(_ address: String) -> String? {
         
+        if let decoded = address.base58CheckDecodedData {
+            if decoded.count != 21 {
+                return nil
+            }
+            
+            return Data(bytes:decoded.bytes[0..<1]).fullHexString
+        }
+        
+        return nil
+    }
+    
+    static func validate(address: String, currencyNameOrSymbol: String, networkType: NetworkType) throws {
+        
+        guard let currency = CurrencyUtil().retrieveCurrencyBySymbol(currencyNameOrSymbol) else {
+            throw ValidationError.invalidCurrency
+        }
+            
+        let addressType = getAddressType(address)
+        
+        if networkType == .prod || networkType == .testNet, let addressTypes = currency.addressTypes[networkType.rawValue] {
+            let result = addressTypes.filter { $0 == addressType }
+            if result.count == 0 {
+                throw ValidationError.invalidAddress
+            }
