@@ -24,3 +24,34 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     private var selectedField: HoshiTextField?=nil
     private var alertViewResponder: SCLAlertViewResponder?=nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        pickerView.backgroundColor = UIColor.white
+        validateButton.layer.cornerRadius = 10
+        holderView.layer.cornerRadius = 10
+        networkField.inputView = pickerView
+        cryptoField.inputView = pickerView
+        let toolBar = createToolbar()
+        networkField.inputAccessoryView = toolBar
+        cryptoField.inputAccessoryView = toolBar
+        initiliaseData()
+    }
+    
+    private func createToolbar() -> UIToolbar {
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.barTintColor = UIColorFromRGB(0x3DAEE2)
+        toolBar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action: #selector(ViewController.donePicker))
+        doneButton.setTitleTextAttributes([ NSAttributedStringKey.font: UIFont(name: "Roboto-Medium", size: 17)!], for: UIControlState.normal)
+        toolBar.tintColor = UIColor.white
+        toolBar.setItems([doneButton], animated: true)
+        return toolBar
+    }
+    
+    @objc func donePicker(){
+         self.view.endEditing(true)
