@@ -55,3 +55,35 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @objc func donePicker(){
          self.view.endEditing(true)
+    }
+    
+    private func createAlert(buttonColor: UIColor) -> SCLAlertView{
+        let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont(name: "Roboto-Medium", size: 20)!,
+            kTextFont: UIFont(name: "Roboto-Light", size: 17)!,
+            kButtonFont: UIFont(name: "Roboto-Medium", size: 17)!,
+            showCloseButton: false,
+            contentViewCornerRadius: 5,
+            buttonCornerRadius: 5,
+            titleColor: UIColorFromRGB(0x32325D)
+        )
+        let alertView = SCLAlertView(appearance: appearance)
+        
+        alertView.addButton("Done", backgroundColor: buttonColor, textColor: UIColor.white, showTimeout: SCLButton.ShowTimeoutConfiguration.init(), target: self, selector: #selector(ViewController.closeAlert))
+        return alertView
+    }
+    
+    @objc func closeAlert() {
+        alertViewResponder?.close()
+    }
+
+    private func initiliaseData(){
+        cryptoField.text = currencyDatasource[0]
+        networkField.text = networkDatasource[0]
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
+    override func didReceiveMemoryWarning() {
