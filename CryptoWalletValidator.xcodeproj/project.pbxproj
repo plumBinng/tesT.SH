@@ -1,0 +1,24 @@
+
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB15E5431FE7844F00C367B5 /* CryptoWalletValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB15E5421FE7844F00C367B5 /* CryptoWalletValidatorTests.swift */; };
+		ABDB3F201FE501C800C559D2 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3F1F1FE501C800C559D2 /* HoshiTextField.swift */; };
+		ABDB3F221FE5022E00C559D2 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3F211FE5022E00C559D2 /* TextFieldEffects.swift */; };
+		ABDB3F251FE539E800C559D2 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3F231FE539E800C559D2 /* SCLExtensions.swift */; };
+		ABDB3F261FE539E800C559D2 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDB3F241FE539E800C559D2 /* SCLAlertView.swift */; };
+		ABDB3F2E1FE559E500C559D2 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABDB3F2B1FE559E500C559D2 /* Roboto-Medium.ttf */; };
+		ABDB3F2F1FE559E500C559D2 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABDB3F2C1FE559E500C559D2 /* Roboto-Light.ttf */; };
+		ABDB3F301FE559E500C559D2 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABDB3F2D1FE559E500C559D2 /* Roboto-Bold.ttf */; };
+		ABE6FB071FE25629000A1A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB061FE25629000A1A92 /* AppDelegate.swift */; };
+		ABE6FB091FE25629000A1A92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB081FE25629000A1A92 /* ViewController.swift */; };
+		ABE6FB0C1FE25629000A1A92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE6FB0A1FE25629000A1A92 /* Main.storyboard */; };
+		ABE6FB0E1FE25629000A1A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE6FB0D1FE25629000A1A92 /* Assets.xcassets */; };
+		ABE6FB111FE25629000A1A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE6FB0F1FE25629000A1A92 /* LaunchScreen.storyboard */; };
+		ABE6FB321FE26BAE000A1A92 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB311FE26BAE000A1A92 /* Currency.swift */; };

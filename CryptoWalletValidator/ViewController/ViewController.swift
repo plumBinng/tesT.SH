@@ -162,3 +162,5 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
         return NSAttributedString(string: pickerTitle, attributes: [NSAttributedStringKey.foregroundColor:  UIColor.gray])
+    }
+}
