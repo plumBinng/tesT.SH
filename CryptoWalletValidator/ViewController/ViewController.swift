@@ -131,3 +131,34 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if selectedField == networkField {
+            return networkDatasource.count
+        }else {
+            return currencyDatasource.count
+        }
+    }
+    
+    // Delegate
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if selectedField == networkField {
+            return networkDatasource[row]
+        }else {
+            return currencyDatasource[row]
+        }
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if selectedField == networkField {
+            networkField.text = networkDatasource[row]
+        }else if selectedField == cryptoField {
+            cryptoField.text =  currencyDatasource[row]
+        }
+    }
+
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        var pickerTitle = currencyDatasource[row]
+        
+        if selectedField == networkField {
+            pickerTitle = networkDatasource[row]
+        }
+        
+        return NSAttributedString(string: pickerTitle, attributes: [NSAttributedStringKey.foregroundColor:  UIColor.gray])
