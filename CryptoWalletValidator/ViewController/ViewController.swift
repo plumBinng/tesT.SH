@@ -111,3 +111,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         guard let type = WalletValidator.NetworkType(rawValue: networkText) else {
             return
         }
+ 
+        do {
+            try  WalletValidator.validate(address: address, currencyNameOrSymbol: cryptoText, networkType: type)
+        } catch {
+            let alert = createAlert(buttonColor: UIColorFromRGB(0xD20044))
+            alertViewResponder = alert.showError("Error", subTitle: "The address provided is not valid")
+            return
+        }
+        
+        let alert = createAlert(buttonColor: UIColorFromRGB(0x00d28e))
+        alertViewResponder = alert.showSuccess("Success", subTitle: "The address provided is valid")
+    }
+    
+    // DataSource
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if selectedField == networkField {
