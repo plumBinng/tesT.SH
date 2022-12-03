@@ -87,3 +87,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func chooseCryptoAction(_ sender: Any) {
+        selectedField = cryptoField
+        pickerView.reloadAllComponents()
+    }
+    
+    @IBAction func chooseNetworkAction(_ sender: Any) {
+        selectedField = networkField
+        pickerView.reloadAllComponents()
+    }
+    
+    @IBAction func validateAction(_ sender: Any) {
+        guard let address = addressField.text, address.count > 0, let networkText = networkField.text, networkText.count > 0, let cryptoText = cryptoField.text, cryptoText.count > 0 else{
+            let alert = createAlert(buttonColor: UIColorFromRGB(0xD20044))
+            alertViewResponder = alert.showError("Error", subTitle: "Please make sure the fields are not empty")
+            return
+        }
+
+        guard let type = WalletValidator.NetworkType(rawValue: networkText) else {
+            return
+        }
