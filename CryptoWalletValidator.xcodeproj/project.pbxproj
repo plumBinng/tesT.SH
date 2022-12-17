@@ -22,3 +22,30 @@
 		ABE6FB0E1FE25629000A1A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE6FB0D1FE25629000A1A92 /* Assets.xcassets */; };
 		ABE6FB111FE25629000A1A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE6FB0F1FE25629000A1A92 /* LaunchScreen.storyboard */; };
 		ABE6FB321FE26BAE000A1A92 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB311FE26BAE000A1A92 /* Currency.swift */; };
+		ABE6FB341FE26C40000A1A92 /* CurrencyUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB331FE26C40000A1A92 /* CurrencyUtil.swift */; };
+		ABE6FB361FE27A3F000A1A92 /* WalletValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB351FE27A3F000A1A92 /* WalletValidator.swift */; };
+		ABE6FB3E1FE27C19000A1A92 /* Base58.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB3A1FE27C19000A1A92 /* Base58.swift */; };
+		ABE6FB3F1FE27C19000A1A92 /* Array+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB3B1FE27C19000A1A92 /* Array+Util.swift */; };
+		ABE6FB411FE27C19000A1A92 /* Data+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB3D1FE27C19000A1A92 /* Data+Util.swift */; };
+		ABE6FB481FE27C6A000A1A92 /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6FB441FE27C6A000A1A92 /* SHA256.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABE6FB181FE25629000A1A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABE6FAFB1FE25629000A1A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABE6FB021FE25629000A1A92;
+			remoteInfo = CrytoWalletValidator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB15E5421FE7844F00C367B5 /* CryptoWalletValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoWalletValidatorTests.swift; sourceTree = "<group>"; };
+		ABDB3F1F1FE501C800C559D2 /* HoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		ABDB3F211FE5022E00C559D2 /* TextFieldEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		ABDB3F231FE539E800C559D2 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
+		ABDB3F241FE539E800C559D2 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		ABDB3F2B1FE559E500C559D2 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		ABDB3F2C1FE559E500C559D2 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		ABDB3F2D1FE559E500C559D2 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
