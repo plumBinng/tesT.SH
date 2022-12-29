@@ -110,3 +110,30 @@
 			);
 			path = "Alert View";
 			sourceTree = "<group>";
+		};
+		ABDB3F281FE539F200C559D2 /* Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB3F241FE539E800C559D2 /* SCLAlertView.swift */,
+				ABDB3F231FE539E800C559D2 /* SCLExtensions.swift */,
+			);
+			path = Textfield;
+			sourceTree = "<group>";
+		};
+		ABDB3F2A1FE559E500C559D2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB3F2B1FE559E500C559D2 /* Roboto-Medium.ttf */,
+				ABDB3F2C1FE559E500C559D2 /* Roboto-Light.ttf */,
+				ABDB3F2D1FE559E500C559D2 /* Roboto-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = SOURCE_ROOT;
+		};
+		ABE6FAFA1FE25629000A1A92 = {
+			isa = PBXGroup;
+			children = (
+				ABE6FB051FE25629000A1A92 /* CryptoWalletValidator */,
+				ABE6FB1A1FE25629000A1A92 /* CryptoWalletValidatorTests */,
+				ABE6FB041FE25629000A1A92 /* Products */,
+			);
