@@ -77,3 +77,36 @@
 		};
 		ABE6FB141FE25629000A1A92 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABCA39941FE393650037BFDB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ABE6FB081FE25629000A1A92 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ABDB3F1E1FE4DDBA00C559D2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB3F281FE539F200C559D2 /* Textfield */,
+				ABDB3F271FE539EC00C559D2 /* Alert View */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ABDB3F271FE539EC00C559D2 /* Alert View */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB3F1F1FE501C800C559D2 /* HoshiTextField.swift */,
+				ABDB3F211FE5022E00C559D2 /* TextFieldEffects.swift */,
+			);
+			path = "Alert View";
+			sourceTree = "<group>";
