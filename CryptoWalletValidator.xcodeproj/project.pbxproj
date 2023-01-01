@@ -137,3 +137,43 @@
 				ABE6FB1A1FE25629000A1A92 /* CryptoWalletValidatorTests */,
 				ABE6FB041FE25629000A1A92 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		ABE6FB041FE25629000A1A92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE6FB031FE25629000A1A92 /* CryptoWalletValidator.app */,
+				ABE6FB171FE25629000A1A92 /* CryptoWalletValidatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE6FB051FE25629000A1A92 /* CryptoWalletValidator */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB3F2A1FE559E500C559D2 /* Fonts */,
+				ABDB3F1E1FE4DDBA00C559D2 /* Components */,
+				ABCA39941FE393650037BFDB /* ViewController */,
+				ABE6FB261FE267CC000A1A92 /* Validator */,
+				ABE6FB061FE25629000A1A92 /* AppDelegate.swift */,
+				ABE6FB0A1FE25629000A1A92 /* Main.storyboard */,
+				ABE6FB0D1FE25629000A1A92 /* Assets.xcassets */,
+				ABE6FB0F1FE25629000A1A92 /* LaunchScreen.storyboard */,
+				ABE6FB121FE25629000A1A92 /* Info.plist */,
+			);
+			path = CryptoWalletValidator;
+			sourceTree = "<group>";
+		};
+		ABE6FB1A1FE25629000A1A92 /* CryptoWalletValidatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB15E5421FE7844F00C367B5 /* CryptoWalletValidatorTests.swift */,
+				ABE6FB1D1FE25629000A1A92 /* Info.plist */,
+			);
+			path = CryptoWalletValidatorTests;
+			sourceTree = "<group>";
+		};
+		ABE6FB261FE267CC000A1A92 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				ABE6FB421FE27C5A000A1A92 /* Crypto */,
