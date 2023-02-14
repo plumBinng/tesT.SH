@@ -231,3 +231,26 @@
 				ABE6FB141FE25629000A1A92 /* Frameworks */,
 				ABE6FB151FE25629000A1A92 /* Resources */,
 			);
+			buildRules = (
+			);
+			dependencies = (
+				ABE6FB191FE25629000A1A92 /* PBXTargetDependency */,
+			);
+			name = CryptoWalletValidatorTests;
+			productName = CrytoWalletValidatorTests;
+			productReference = ABE6FB171FE25629000A1A92 /* CryptoWalletValidatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABE6FAFB1FE25629000A1A92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					ABE6FB021FE25629000A1A92 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
