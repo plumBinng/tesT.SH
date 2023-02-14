@@ -202,3 +202,32 @@
 			);
 			path = Crypto;
 			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABE6FB021FE25629000A1A92 /* CryptoWalletValidator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE6FB201FE25629000A1A92 /* Build configuration list for PBXNativeTarget "CryptoWalletValidator" */;
+			buildPhases = (
+				ABE6FAFF1FE25629000A1A92 /* Sources */,
+				ABE6FB001FE25629000A1A92 /* Frameworks */,
+				ABE6FB011FE25629000A1A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoWalletValidator;
+			productName = CrytoWalletValidator;
+			productReference = ABE6FB031FE25629000A1A92 /* CryptoWalletValidator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABE6FB161FE25629000A1A92 /* CryptoWalletValidatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE6FB231FE25629000A1A92 /* Build configuration list for PBXNativeTarget "CryptoWalletValidatorTests" */;
+			buildPhases = (
+				ABE6FB131FE25629000A1A92 /* Sources */,
+				ABE6FB141FE25629000A1A92 /* Frameworks */,
+				ABE6FB151FE25629000A1A92 /* Resources */,
+			);
