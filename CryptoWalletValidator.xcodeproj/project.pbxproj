@@ -254,3 +254,40 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+					};
+					ABE6FB161FE25629000A1A92 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ABE6FB021FE25629000A1A92;
+					};
+				};
+			};
+			buildConfigurationList = ABE6FAFE1FE25629000A1A92 /* Build configuration list for PBXProject "CryptoWalletValidator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABE6FAFA1FE25629000A1A92;
+			productRefGroup = ABE6FB041FE25629000A1A92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABE6FB021FE25629000A1A92 /* CryptoWalletValidator */,
+				ABE6FB161FE25629000A1A92 /* CryptoWalletValidatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABE6FB011FE25629000A1A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDB3F2E1FE559E500C559D2 /* Roboto-Medium.ttf in Resources */,
+				ABE6FB111FE25629000A1A92 /* LaunchScreen.storyboard in Resources */,
+				ABDB3F301FE559E500C559D2 /* Roboto-Bold.ttf in Resources */,
+				ABDB3F2F1FE559E500C559D2 /* Roboto-Light.ttf in Resources */,
