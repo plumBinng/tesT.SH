@@ -320,3 +320,31 @@
 				ABE6FB071FE25629000A1A92 /* AppDelegate.swift in Sources */,
 				ABE6FB3E1FE27C19000A1A92 /* Base58.swift in Sources */,
 				ABE6FB481FE27C6A000A1A92 /* SHA256.swift in Sources */,
+				ABE6FB411FE27C19000A1A92 /* Data+Util.swift in Sources */,
+				ABDB3F201FE501C800C559D2 /* HoshiTextField.swift in Sources */,
+				ABDB3F261FE539E800C559D2 /* SCLAlertView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE6FB131FE25629000A1A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB15E5431FE7844F00C367B5 /* CryptoWalletValidatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABE6FB191FE25629000A1A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABE6FB021FE25629000A1A92 /* CryptoWalletValidator */;
+			targetProxy = ABE6FB181FE25629000A1A92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABE6FB0A1FE25629000A1A92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
