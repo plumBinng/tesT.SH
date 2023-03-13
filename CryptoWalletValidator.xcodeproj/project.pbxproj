@@ -535,3 +535,30 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78LRR34P66;
+				INFOPLIST_FILE = CryptoWalletValidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iame.CryptoWalletValidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoWalletValidator.app/CryptoWalletValidator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABE6FAFE1FE25629000A1A92 /* Build configuration list for PBXProject "CryptoWalletValidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE6FB1E1FE25629000A1A92 /* Debug */,
+				ABE6FB1F1FE25629000A1A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE6FB201FE25629000A1A92 /* Build configuration list for PBXNativeTarget "CryptoWalletValidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE6FB211FE25629000A1A92 /* Debug */,
+				ABE6FB221FE25629000A1A92 /* Release */,
