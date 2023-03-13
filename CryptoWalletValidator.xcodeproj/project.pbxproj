@@ -562,3 +562,20 @@
 			buildConfigurations = (
 				ABE6FB211FE25629000A1A92 /* Debug */,
 				ABE6FB221FE25629000A1A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE6FB231FE25629000A1A92 /* Build configuration list for PBXNativeTarget "CryptoWalletValidatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE6FB241FE25629000A1A92 /* Debug */,
+				ABE6FB251FE25629000A1A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABE6FAFB1FE25629000A1A92 /* Project object */;
+}
