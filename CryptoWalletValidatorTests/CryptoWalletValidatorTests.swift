@@ -54,3 +54,5 @@ class CrytoWalletValidatorTests: XCTestCase {
             XCTAssertTrue(true)
         }
     }
+
+}
