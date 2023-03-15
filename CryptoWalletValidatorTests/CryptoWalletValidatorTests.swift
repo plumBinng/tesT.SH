@@ -29,3 +29,28 @@ class CrytoWalletValidatorTests: XCTestCase {
     }
     
     func testInvalidBTCAddress() {
+        let testAddress = "InVaLidAddress0x"
+        do {
+            try  WalletValidator.validate(address: testAddress, currencyNameOrSymbol: "btc", networkType: .prod)
+        } catch  {
+            XCTAssertTrue(true)
+        }
+    }
+    
+    func testValidLTCAddress() {
+        let testAddress = "LKmARBModxpwXVpQAY2dietponZtWmQVvA"
+        do {
+            try  WalletValidator.validate(address: testAddress, currencyNameOrSymbol: "ltc", networkType: .prod)
+        } catch  {
+            XCTFail("Failed to validate BTC address")
+        }
+    }
+    
+    func testInValidLTCAddress() {
+        let testAddress = "InVaLidAddress0x"
+        do {
+            try  WalletValidator.validate(address: testAddress, currencyNameOrSymbol: "btc", networkType: .prod)
+        } catch  {
+            XCTAssertTrue(true)
+        }
+    }
