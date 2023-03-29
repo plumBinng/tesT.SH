@@ -3,4 +3,5 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPME
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFB
